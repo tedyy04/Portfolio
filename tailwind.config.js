@@ -1,0 +1,76 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "on-surface": "#e5e2e1",
+        "surface-dim": "#131313",
+        "primary": "#ffffff",
+        "surface-container-low": "#1c1b1b",
+        "on-surface-variant": "#c6c6c6",
+        "secondary-container": "#454747",
+        "on-secondary-fixed": "#1a1c1c",
+        "surface-variant": "#353534",
+        "on-secondary-fixed-variant": "#3a3c3c",
+        "tertiary-fixed-dim": "#474747",
+        "tertiary-container": "#919191",
+        "error": "#ffb4ab",
+        "surface-bright": "#393939",
+        "surface-tint": "#c6c6c7",
+        "surface": "#131313",
+        "surface-container-high": "#2a2a2a",
+        "on-tertiary-fixed-variant": "#e2e2e2",
+        "tertiary": "#e2e2e2",
+        "primary-fixed": "#5d5f5f",
+        "surface-container": "#201f1f",
+        "inverse-on-surface": "#313030",
+        "tertiary-fixed": "#5e5e5e",
+        "on-tertiary-fixed": "#ffffff",
+        "secondary-fixed": "#c6c6c7",
+        "primary-container": "#d4d4d4",
+        "error-container": "#93000a",
+        "primary-fixed-dim": "#454747",
+        "surface-container-highest": "#353534",
+        "on-primary-container": "#000000",
+        "outline": "#919191",
+        "surface-container-lowest": "#0e0e0e",
+        "on-error-container": "#ffdad6",
+        "inverse-primary": "#5d5f5f",
+        "on-background": "#e5e2e1",
+        "inverse-surface": "#e5e2e1",
+        "on-error": "#690005",
+        "background": "#131313",
+        "secondary-fixed-dim": "#aaabab",
+        "on-tertiary-container": "#000000",
+        "secondary": "#c6c6c7",
+        "on-secondary": "#1a1c1c",
+        "outline-variant": "#474747",
+        "on-primary": "#1a1c1c",
+        "on-secondary-container": "#e2e2e2",
+        "on-primary-fixed": "#ffffff",
+        "on-tertiary": "#1b1b1b",
+        "on-primary-fixed-variant": "#e2e2e2"
+      },
+      fontFamily: {
+        "headline": ["Manrope", "sans-serif"],
+        "body": ["Inter", "sans-serif"],
+        "label": ["Inter", "sans-serif"]
+      },
+      borderRadius: {
+        "DEFAULT": "0px",
+        "lg": "0px",
+        "xl": "0px",
+        "full": "9999px"
+      },
+    },
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/container-queries')
+  ],
+}

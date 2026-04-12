@@ -1,0 +1,735 @@
+{
+  "ted_103.jpeg": {
+    "category": "Event",
+    "label": "Focus",
+    "alt": "Event shift. Just me doing my thing. Grateful for the team..",
+    "skipML": true
+  },
+  "ted_114.jpeg": {
+    "tags": "",
+    "label": "City on Fire",
+    "alt": "A quiet night suddenly lit up like a dream.",
+    "exif": {
+      "shutterSpeed": "4s",
+      "iso": 100,
+      "aperture": "f/5",
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "focalLengthMm": 35,
+      "width": 1550,
+      "height": 1937
+    }
+  },
+  "ted_129.jpeg": {
+    "category": "Scene",
+    "label": "Emerald Oasis",
+    "alt": "A moment of perfect peace.",
+    "tags": "Nature",
+    "skipML": true,
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 50mm f/1.8 STM",
+      "aperture": "f/8",
+      "shutterSpeed": "1/250",
+      "iso": 200
+    }
+  },
+  "ted_133.jpeg": {
+    "category": "Event",
+    "label": "Quiet Connection",
+    "alt": "It’s not just a competition.",
+    "exif": {
+      "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_142.jpeg": {
+    "category": "Concept",
+    "label": "Golden Girls",
+    "alt": "The best times are the unplanned ones.",
+    "skipML": true,
+    "tags": "Pre-grad",
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/4",
+      "shutterSpeed": "1/160",
+      "iso": 400
+    }
+  },
+  "ted_149.jpeg": {
+    "tags": "City",
+    "label": "Midnight Traffic",
+    "alt": "The city never really sleeps, just slows down a bit.",
+    "exif": {
+      "shutterSpeed": "1/40",
+      "iso": 1000,
+      "aperture": "f/2.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back triple camera 15.66mm f/2.8",
+      "focalLengthMm": 15.659999847383,
+      "focalLength35Mm": 120,
+      "width": 2268,
+      "height": 4032
+    }
+   
+  },
+  "ted_178.jpeg": {
+    "category": "Concept",
+    "label": "Chapter Closed",
+    "alt": "Final goodbye to the sunny campus.",
+    "skipML": true,
+    "tags": "Pre-grad",
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/160",
+      "iso": 400
+    }
+  },
+  "ted_184.jpeg": {
+    "category": "Scene",
+    "label": "Window Light & Bản",
+    "tags": "Coffee",
+    "alt": "Enjoying the calm view and good coffee."
+  },
+  "ted_19.jpeg": {
+    "category": "Scene",
+    "label": "Silent Shore",
+    "alt": "The best kind of reset. Grateful.",
+    "skipML": true,
+    "tags": "Nature",
+    "exif": {
+      "camera": "Canon EOS 70D",
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "aperture": "f/12",
+      "shutterSpeed": "1/250",
+      "iso": 100
+    }
+  },
+  "ted_219.jpeg": {
+    "category": "Scene",
+    "label": "Rest Station",
+    "alt": "The sun through the trees makes everything feel like a movie.",
+    "tags": "University"
+  },
+  "ted_22.jpeg": {
+    "category": "Scene",
+    "label": "A Timeless Vow",
+    "alt": "The start of our story.",
+    "tags": "Wedding",
+    "exif": {
+      "camera": "Canon EOS 70D"
+    }
+  },
+  "ted_230.jpeg": {
+    "category": "Concept",
+    "label": "Thành An",
+    "alt": "An's Graduation",
+    "skipML": true,
+    "tags": "Graduation",
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/160",
+      "iso": 500
+    }
+  },
+  "ted_242.jpeg": {
+    "tags": "Nature",
+    "label": "Clouds Below",
+    "alt": "Woke up above the clouds, everything felt softer.",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 100,
+      "aperture": "f/3.5",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 6240,
+      "height": 4161
+    }
+  },
+  "ted_247.jpeg": {
+    "category": "Street",
+    "label": "Saigon After Dark",
+    "alt": "The simple joy taking in the view.",
+    "tags": "City"
+  },
+  "ted_251.jpeg": {
+    "category": "Street",
+    "label": "Station Life",
+    "tags": "City",
+    "alt": "Morning rush at the Metro."
+  },
+  "ted_253.jpeg": {
+    "tags": "",
+    "label": "The Empty Chair",
+    "alt": "Found a chair in the middle of nowhere, didn’t sit.",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 100,
+      "aperture": "f/6.3",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 3553,
+      "height": 2369
+    }
+  },
+  "ted_272.jpeg": {
+    "label": "Together we meet",
+    "alt": "We looked up, hoping to catch something we couldn’t name.",
+    "tags": "",
+    "exif": {
+      "width": 2400,
+      "height": 1600,
+      "iso": 6400,
+      "shutterSpeed": "1/60",
+      "aperture": "f4",
+      "camera": "Sony Alpha 6000",
+      "lens": "Sony 16-50mmm f3.5-5.6 OSS Alpha E-mount"
+    }
+  },
+  "ted_277.jpeg": {
+    "label": "In Between Moments",
+    "alt": "Nothing special happened, but I remember this clearly.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/30",
+      "iso": 1000,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_286.jpeg": {
+    "label": "Through My Lens",
+    "alt": "Some memories only exist because I chose to keep them.",
+    "tags": "",
+    "exif": {
+      "width": 1600,
+      "height": 2400,
+      "lens": "XC 15-45mm f3.5-5.6 OIS PZ",
+      "camera": "Fujifilm XA3"
+    }
+  },
+  "ted_31.jpeg": {
+    "category": "Concept",
+    "label": "A Quiet Chapter",
+    "alt": "The simple joy of holding a physical book.",
+    "skipML": true,
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/160",
+      "iso": 100
+    }
+  },
+  "ted_321.jpeg": {
+    "tags": "University",
+    "category": "Scene",
+    "label": "Workspace Flow",
+    "alt": "Beauty corner at Inspire Library"
+  },
+  "ted_352.jpeg": {
+    "label": "Golden Hour People at Creative Park",
+    "alt": "Everyone looked softer under this light.",
+    "tags": "Sunset",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 100,
+      "aperture": "f/14",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1350
+    }
+  },
+  "ted_398.jpeg": {
+    "category": "Event",
+    "label": "Grace in the Dark",
+    "alt": "A dance of light and shadow.",
+    "exif": {
+      "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_401.jpeg": {
+    "label": "Quiet Reflections",
+    "alt": "The world was loud, but this part stayed calm.",
+    "tags": "Sunset",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 100,
+      "aperture": "f/22",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1350
+    }
+  },
+  "ted_412.jpeg": {
+    "category": "Street",
+    "label": "Through the Glass",
+    "alt": "Found this frame while waiting for my turn to the train."
+  },
+  "ted_420.jpeg": {
+    "category": "Other",
+    "hideOnHome": true
+  },
+  "ted_442.jpeg": {
+    "category": "Concept",
+    "label": "Milestones",
+    "alt": "Golden hour celebrations.",
+    "skipML": true,
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/1.4",
+      "shutterSpeed": "1/500",
+      "iso": 100
+    }
+  },
+  "ted_446.jpeg": {
+    "category": "Street",
+    "label": "Passing Through",
+    "alt": "Just a stranger in a hurry."
+  },
+  "ted_450.jpeg": {
+    "category": "Concept",
+    "label": "Sunny Smiles",
+    "tags": "Pre-grad",
+    "alt": "Captured from above. Long shadows, bright hearts on campus."
+  },
+  "ted_451.jpeg": {
+    "tags": "",
+    "label": "A Page of Peace",
+    "alt": "A small moment with a good book and nothing else.",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 100,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 5878,
+      "height": 3920
+    }
+  },
+  "ted_454.jpeg": {
+    "category": "Event",
+    "label": "Sparkling Harmony",
+    "alt": "Watching the stage light up like a thousand stars."
+  },
+  "ted_464.jpeg": {
+    "category": "Concept",
+    "label": "Graduation Hat",
+    "alt": "A close-up of a dream coming true.",
+    "skipML": true,
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/160",
+      "iso": 100
+    }
+  },
+  "ted_531.jpeg": {
+    "label": "We Grew Here",
+    "alt": "Different paths, same starting point.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 200,
+      "aperture": "f/5",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_533.jpeg": {
+    "label": "This Was Us",
+    "alt": "TED10day",
+    "tags": "",
+    "exif": {
+      "width": 1799,
+      "shutterSpeed": "1/1250",
+      "aperture": "f/4",
+      "height": 2400,
+      "iso": 400,
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012"
+    }
+  },
+  "ted_540.jpeg": {
+    "category": "Event",
+    "label": "Starlight Wings",
+    "alt": "Watching the lights dance around her like a million stars.",
+    "exif": {
+      "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_567.jpeg": {
+    "tags": "Funiture",
+    "label": "Corner Light",
+    "alt": "Sat here longer than I planned, just watching the light.",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 100,
+      "aperture": "f/2.5",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 5448,
+      "height": 3632
+    }
+  },
+  "ted_61.jpeg": {
+    "category": "Event",
+    "label": "Red Spotlight",
+    "alt": "The red dress, the movement, the smile.",
+    "exif": {
+      "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_615.jpeg": {
+    "category": "Scene",
+    "label": "Silent Shore",
+    "tags": "Nature",
+    "alt": "Landscape",
+    "exif": {
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "camera": "Canon EOS 70D",
+      "iso": 400,
+      "shutterSpeed": "1/250",
+      "aperture": "f/12"
+
+    }
+  },
+  "ted_622.jpeg": {
+    "category": "Event",
+    "label": "Crimson Wings",
+    "alt": "The red dress, the movement, and that electric energy.",
+    "exif": {
+      "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_624.jpeg": {
+    "label": "Running with the Wind",
+    "alt": "Didn’t look back, just followed where the wind took me.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 100,
+      "aperture": "f/8",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1350
+    }
+  },
+  "ted_625.jpeg": {
+    "tags": "Nature",
+    "label": "First Light",
+    "alt": "Morning came quietly, I didn’t say anything.",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 100,
+      "aperture": "f/9",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 4691,
+      "height": 3285
+    }
+  },
+  "ted_635.jpeg": {
+    "tags": "Animals",
+    "label": "Soft Eyes",
+    "alt": "He looked at me like he had something to say.",
+    "exif": {
+      "shutterSpeed": "1/100",
+      "iso": 100,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 6240,
+      "height": 4160
+    }
+  },
+  "ted_674.jpeg": {
+    "category": "Scene",
+    "label": "Light on the Shelf",
+    "alt": "Just a fragment of home.",
+    "tags": "Funiture"
+  },
+  "ted_687.jpeg": {
+    "label": "Bitexco at Dusk",
+    "alt": "The city slowed down, just for a moment.",
+    "tags": "City",
+    "exif": {
+      "shutterSpeed": "1/250",
+      "iso": 200,
+      "aperture": "f/9",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 105,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_694.jpeg": {
+    "tags": "Sky",
+    "label": "On the Way Up",
+    "alt": "Slow ride, good view, no rush.",
+    "exif": {
+      "shutterSpeed": "1/250",
+      "iso": 100,
+      "aperture": "f/8",
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "focalLengthMm": 35,
+      "width": 6240,
+      "height": 4160
+    }
+  },
+  "ted_700.jpeg": {
+    "category": "Concept",
+    "label": "Walking into the path",
+    "alt": "A quiet walk on the familiar green paths where it all began."
+  },
+  "ted_723.jpeg": {
+    "category": "Street",
+    "label": "City Blooms",
+    "alt": "Finding a bit of softness in the middle of the daily rush."
+  },
+  "ted_726.jpeg": {
+    "category": "Concept",
+    "label": "Thành An",
+    "alt": "An's Graduation",
+    "skipML": true,
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/2.8",
+      "shutterSpeed": "1/160",
+      "iso": 400
+    }
+  },
+  "ted_737.jpeg": {
+    "category": "Street",
+    "label": "Dog",
+    "tags": "Animals",
+    "alt": "Found this old friend resting by the road today."
+  },
+  "ted_739.jpeg": {
+    "tags": "University",
+    "label": "Afternoon Stillness",
+    "alt": "Everything felt calm, like time paused for a bit.",
+    "exif": {
+      "width": 4096,
+      "height": 2730
+    }
+  },
+  "ted_741.jpeg": {
+    "tags": "",
+    "label": "After Hours",
+    "alt": "Stayed a little longer than planned, didn’t regret it.",
+    "exif": {
+      "width": 2048,
+      "height": 1462,
+      "camera": "Điện thoại KUyên"
+    }
+  },
+  "ted_761.jpeg": {
+    "label": "We Stand Here",
+    "alt": "TED10day",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 100,
+      "aperture": "f/5",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_772.jpeg": {
+    "tags": "",
+    "label": "A Quiet Page",
+    "alt": "A little girl and a book, the world felt slower.",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 100,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 4326,
+      "height": 2884
+    }
+  },
+  "ted_832.jpeg": {
+    "tags": "Nature",
+    "label": "Where the Wind Goes",
+    "alt": "Nothing much, just standing there watching things move.",
+    "exif": {
+      "shutterSpeed": "1/320",
+      "iso": 100,
+      "aperture": "f/6.3",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 6240,
+      "height": 4160
+    }
+  },
+  "ted_86.jpeg": {
+    "label": "No Bad Days",
+    "alt": "We didn’t plan anything, just laughed a lot.",
+    "tags": "Animals",
+    "exif": {
+      "shutterSpeed": "1/200",
+      "iso": 250,
+      "aperture": "f/5.6",
+      "camera": "Canon EOS RP",
+      "lens": "EF-S18-135mm f/3.5-5.6 IS STM",
+      "focalLengthMm": 135,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_863.jpeg": {
+    "tags": "",
+    "label": "Tools of Mine",
+    "alt": "Started small, but it meant everything.",
+    "exif": {
+      "shutterSpeed": "1/20",
+      "iso": 1600,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 105,
+      "width": 4590,
+      "height": 3060
+    }
+  },
+  "ted_880.jpeg": {
+    "label": "Simple Joys",
+    "alt": "Nothing big, just a day that felt right.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 100,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  "ted_903.jpeg": {
+    "label": "A Place I’ll Miss",
+    "alt": "Didn’t think it would mean this much.",
+    "tags": "University",
+    "exif": {
+      "shutterSpeed": "1/200",
+      "iso": 100,
+      "aperture": "f/5.6",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 28,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  "ted_937.jpeg": {
+    "category": "Concept",
+    "label": "Graduation Props",
+    "alt": "",
+    "tags": "Graduation",
+    "exif": {
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "aperture": "f/4",
+      "shutterSpeed": "1/250",
+      "iso": 400
+    }
+  },
+  "ted_943.jpeg": {
+    "label": "Still There",
+    "alt": "No matter how far we go, it’s always there.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/100",
+      "iso": 50,
+      "aperture": "f/4.5",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 105,
+      "width": 1349,
+      "height": 2400
+    }
+  },
+  "ted_945.jpeg": {
+    "category": "Event",
+    "label": "TOP40 NDSV",
+    "alt": "",
+    "exif": {
+      "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_947.jpeg": {
+    "category": "Scene",
+    "label": "Window Light & Bản",
+    "tags": "Coffee",
+    "alt": "Another aspect"
+  },
+  "ted_958.jpeg": {
+    "category": "Concept",
+    "label": "Her",
+    "alt": "Sunday wanderings."
+  },
+  "ted_959.jpeg": {
+    "tags": "",
+    "label": "Under the Light",
+    "alt": "For a moment, everything else faded away.",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 1600,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 105,
+      "width": 3504,
+      "height": 6229
+    }
+  },
+  "ted_975.jpeg": {
+    "category": "Scene",
+    "label": "Flower",
+    "alt": "Perfect Focus"
+  },
+  "ted_976.jpeg": {
+    "category": "Event",
+    "label": "Trần Tín Đạt",
+    "alt": "Nam Vương NDSV Lần 5 TDTU",
+    "exif": {
+      "lens": "35mm F1.4 DG HSM | Art 012"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary;
+    background-color: #131313;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer utilities {
+  @keyframes page-enter {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 24px, 0) scale(0.985);
+    }
+    70% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1.004);
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .page-enter {
+    animation: page-enter 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    transform-origin: 50% 30%;
+    backface-visibility: hidden;
+    will-change: opacity, transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .page-enter {
+      animation: none;
+      will-change: auto;
+    }
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 20px;
+  }
+  @media (min-width: 768px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  .image-frame-hover:hover {
+    outline: 1px solid #ffffff;
+    outline-offset: -1px;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+}
