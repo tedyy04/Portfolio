@@ -1,6 +1,12 @@
 import { useState } from 'react';
 import Lightbox from './Lightbox';
 import type { PortfolioItem } from '../data/portfolioItems';
+import Reveal from './Reveal';
+
+type LightboxOrigin = {
+  src: string;
+  rect: { top: number; left: number; width: number; height: number };
+};
 
 interface PortfolioGridProps {
   items: PortfolioItem[];
@@ -9,9 +15,11 @@ interface PortfolioGridProps {
 export default function PortfolioGrid({ items }: PortfolioGridProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxOrigin, setLightboxOrigin] = useState<LightboxOrigin | null>(null);
 
-  const openLightbox = (index: number) => {
+  const openLightbox = (index: number, origin?: LightboxOrigin | null) => {
     setCurrentImageIndex(index);
+    setLightboxOrigin(origin ?? null);
     setLightboxOpen(true);
   };
 
@@ -19,10 +27,24 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
     <>
       <section className="masonry-grid">
         {items.map((item, index) => (
-          <div
+          <Reveal
             key={item.id}
-            onClick={() => openLightbox(index)}
-            className="masonry-item group relative cursor-pointer overflow-hidden image-frame-hover transition-all duration-500"
+            onClick={(e) => {
+              const container = e.currentTarget as HTMLElement;
+              const img = container.querySelector('img');
+              const rect = img?.getBoundingClientRect();
+
+              if (rect) {
+                openLightbox(index, {
+                  src: item.src,
+                  rect: { top: rect.top, left: rect.left, width: rect.width, height: rect.height },
+                });
+              } else {
+                openLightbox(index);
+              }
+            }}
+            className="masonry-item group relative cursor-pointer overflow-hidden rounded-2xl glass-frame liquid-hover image-frame-hover transition-all duration-500"
+            delayMs={(index % 9) * 45}
           >
             <img
               src={item.src}
@@ -31,18 +53,18 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
             />
             {item.tags?.[0] && (
               <div className="absolute top-4 left-4 transition-opacity duration-300 opacity-90 group-hover:opacity-100">
-                <span className="font-label text-[9px] tracking-[0.2em] uppercase text-primary bg-primary/15 border border-primary/25 backdrop-blur-sm px-2 py-1">
+                <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase">
                   {item.tags[0]}
                 </span>
               </div>
             )}
 
             <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
-              <span className="font-label text-[9px] tracking-[0.2em] uppercase text-primary bg-surface/40 backdrop-blur-sm px-2 py-1">
+              <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase">
                 {item.label}
               </span>
             </div>
-          </div>
+          </Reveal>
         ))}
       </section>
 
@@ -52,6 +74,8 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
           currentIndex={currentImageIndex}
           onClose={() => setLightboxOpen(false)}
           onNavigate={(index) => setCurrentImageIndex(index)}
+          origin={lightboxOrigin}
+          onConsumeOrigin={() => setLightboxOrigin(null)}
         />
       )}
     </>

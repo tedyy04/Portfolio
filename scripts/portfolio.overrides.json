@@ -71,7 +71,6 @@
       "width": 2268,
       "height": 4032
     }
-   
   },
   "ted_178.jpeg": {
     "category": "Concept",
@@ -207,6 +206,23 @@
       "height": 1600
     }
   },
+  "ted_282.jpeg": {
+    "label": "Some moments speak in silhouette",
+    "alt": "A striking monochrome frame of mystery, contrast, and presence.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 640,
+      "aperture": "f/2.8",
+      "camera": "OLYMPUS IMAGING CORP. E-M1",
+      "lens": "LUMIX G VARIO 35-100/F2.8",
+      "focalLengthMm": 100,
+      "focalLength35Mm": 200,
+      "width": 2400,
+      "height": 1631,
+      "flashFired": false
+    }
+  },
   "ted_286.jpeg": {
     "label": "Through My Lens",
     "alt": "Some memories only exist because I chose to keep them.",
@@ -215,7 +231,10 @@
       "width": 1600,
       "height": 2400,
       "lens": "XC 15-45mm f3.5-5.6 OIS PZ",
-      "camera": "Fujifilm XA3"
+      "camera": "Fujifilm XA3",
+      "shutterSpeed": "1/35",
+      "aperture": "f/3.5",
+      "iso": 6400
     }
   },
   "ted_31.jpeg": {
@@ -341,6 +360,36 @@
       "iso": 100
     }
   },
+  "ted_490.jpeg": {
+    "label": "Strangers",
+    "alt": "Where strangers slowly became a team.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 800,
+      "aperture": "f/4",
+      "camera": "Canon EOS R5",
+      "lens": "RF50mm F1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1350
+    }
+  },
+  "ted_528.jpeg": {
+    "label": "Lights in the Dark",
+    "alt": "A thousand quiet stars in one room.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/60",
+      "iso": 1250,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "RF50mm F1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_531.jpeg": {
     "label": "We Grew Here",
     "alt": "Different paths, same starting point.",
@@ -393,6 +442,29 @@
       "height": 3632
     }
   },
+  "ted_576.jpeg": {
+    "label": "Where the Light Stayed",
+    "alt": "A quiet graduation moment, framed by shadow, silence, and golden light.",
+    "tags": "Pre-grad",
+    "exif": {
+      "width": 2400,
+      "height": 1538,
+      "shutterSpeed": "1/400",
+      "iso": 400,
+      "aperture": "f2.8",
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012"
+    }
+  },
+  "ted_580.jpeg": {
+    "label": "Park walk",
+    "alt": "A soft cinematic moment in the middle of green stillness.",
+    "tags": "",
+    "exif": {
+      "width": 1600,
+      "height": 2400
+    }
+  },
   "ted_61.jpeg": {
     "category": "Event",
     "label": "Red Spotlight",
@@ -412,7 +484,6 @@
       "iso": 400,
       "shutterSpeed": "1/250",
       "aperture": "f/12"
-
     }
   },
   "ted_622.jpeg": {
@@ -468,6 +539,21 @@
       "height": 4160
     }
   },
+  "ted_66.jpeg": {
+    "label": "Quiet focus before the noise",
+    "alt": "Holding the moment together in silence.",
+    "tags": "Chạm Đông",
+    "exif": {
+      "shutterSpeed": "1/60",
+      "iso": 4000,
+      "aperture": "f/4",
+      "camera": "Canon EOS R5",
+      "lens": "RF70-200mm F4 L IS USM",
+      "focalLengthMm": 200,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_674.jpeg": {
     "category": "Scene",
     "label": "Light on the Shelf",
@@ -504,10 +590,39 @@
       "height": 4160
     }
   },
+  "ted_698.jpeg": {
+    "label": "Main Character Energy",
+    "alt": "Smiling like the ending was worth it.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/250",
+      "iso": 100,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "85mm F1.4 DG HSM | Art 016",
+      "focalLengthMm": 85,
+      "width": 1600,
+      "height": 2400
+    }
+  },
   "ted_700.jpeg": {
     "category": "Concept",
     "label": "Walking into the path",
     "alt": "A quiet walk on the familiar green paths where it all began."
+  },
+  "ted_701.jpeg": {
+    "label": "Into the Light",
+    "alt": "Some endings arrive like golden hour.",
+    "tags": "Pre-grad",
+    "exif": {
+      "width": 2400,
+      "height": 1348,
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "shutterSpeed": "1/250",
+      "aperture": "f/2.8",
+      "iso": 400
+    }
   },
   "ted_723.jpeg": {
     "category": "Street",
@@ -527,6 +642,21 @@
       "iso": 400
     }
   },
+  "ted_735.jpeg": {
+    "label": "Love, Loud and Unfiltered",
+    "alt": "The kind of moment you never outgrow.",
+    "tags": "Graduation",
+    "exif": {
+      "shutterSpeed": "1/200",
+      "iso": 125,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "85mm F1.4 DG HSM | Art 016",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_737.jpeg": {
     "category": "Street",
     "label": "Dog",
@@ -543,13 +673,46 @@
     }
   },
   "ted_741.jpeg": {
-    "tags": "",
+    "tags": "Friends",
     "label": "After Hours",
     "alt": "Stayed a little longer than planned, didn’t regret it.",
     "exif": {
       "width": 2048,
       "height": 1462,
-      "camera": "Điện thoại KUyên"
+      "camera": "Điện thoại KUyên",
+      "lens": "iPhone 12 front camera 23mm f/2.2",
+      "shutterSpeed": "1/30",
+      "aperture": "f/2.8",
+      "iso": 1000
+    }
+  },
+  "ted_75.jpeg": {
+    "label": "In the Spotlight",
+    "alt": "She stood where the light chose her.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 1600,
+      "aperture": "f/5.6",
+      "camera": "Canon EOS 700D",
+      "lens": "EF-S18-135mm f/3.5-5.6 IS STM",
+      "focalLengthMm": 113,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  "ted_754.jpeg": {
+    "label": "The Ones Who Made It Softer",
+    "alt": "No spotlight felt brighter than this.",
+    "tags": "",
+    "exif": {
+      "width": 2400,
+      "height": 1600,
+      "aperture": "f/2.8",
+      "iso": 400,
+      "shutterSpeed": "1/250",
+      "camera":"Canon EOS RP",
+      "lens": "85mm F1.4 DG HSM | Art 016"
     }
   },
   "ted_761.jpeg": {

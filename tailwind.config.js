@@ -8,53 +8,66 @@ export default {
   theme: {
     extend: {
       colors: {
-        "on-surface": "#e5e2e1",
-        "surface-dim": "#131313",
-        "primary": "#ffffff",
-        "surface-container-low": "#1c1b1b",
-        "on-surface-variant": "#c6c6c6",
-        "secondary-container": "#454747",
-        "on-secondary-fixed": "#1a1c1c",
-        "surface-variant": "#353534",
-        "on-secondary-fixed-variant": "#3a3c3c",
-        "tertiary-fixed-dim": "#474747",
-        "tertiary-container": "#919191",
+        "background": "#070814",
+        "on-background": "#e9ecff",
+
+        "surface": "#0a0b18",
+        "surface-dim": "#070814",
+        "surface-bright": "#14183a",
+
+        "surface-container-lowest": "#05060f",
+        "surface-container-low": "#0b0f22",
+        "surface-container": "#0f1430",
+        "surface-container-high": "#141a3a",
+        "surface-container-highest": "#1a2146",
+
+        "surface-variant": "#182043",
+        "outline-variant": "#2b3153",
+         "outline": "#9aa5d4",
+
+        "primary": "#f4f6ff",
+        "on-primary": "#070814",
+        "primary-container": "#b9c6ff",
+        "on-primary-container": "#070814",
+
+        "secondary": "#7df9ff",
+        "on-secondary": "#070814",
+        "secondary-container": "#132b3a",
+        "on-secondary-container": "#d6fbff",
+
+        "tertiary": "#b9a2ff",
+        "on-tertiary": "#070814",
+        "tertiary-container": "#2a1f4f",
+        "on-tertiary-container": "#efe9ff",
+
+        "surface-tint": "#7ea6ff",
+
+        "on-surface": "#e9ecff",
+         "on-surface-variant": "#c6cdf2",
+
+        "inverse-surface": "#e9ecff",
+        "inverse-on-surface": "#0a0b18",
+        "inverse-primary": "#2a55ff",
+
+        "primary-fixed": "#7ea6ff",
+        "primary-fixed-dim": "#5e7dff",
+        "on-primary-fixed": "#070814",
+        "on-primary-fixed-variant": "#0a0b18",
+
+        "secondary-fixed": "#7df9ff",
+        "secondary-fixed-dim": "#42d9ff",
+        "on-secondary-fixed": "#070814",
+        "on-secondary-fixed-variant": "#0a0b18",
+
+        "tertiary-fixed": "#b9a2ff",
+        "tertiary-fixed-dim": "#9a7dff",
+        "on-tertiary-fixed": "#070814",
+        "on-tertiary-fixed-variant": "#0a0b18",
+
         "error": "#ffb4ab",
-        "surface-bright": "#393939",
-        "surface-tint": "#c6c6c7",
-        "surface": "#131313",
-        "surface-container-high": "#2a2a2a",
-        "on-tertiary-fixed-variant": "#e2e2e2",
-        "tertiary": "#e2e2e2",
-        "primary-fixed": "#5d5f5f",
-        "surface-container": "#201f1f",
-        "inverse-on-surface": "#313030",
-        "tertiary-fixed": "#5e5e5e",
-        "on-tertiary-fixed": "#ffffff",
-        "secondary-fixed": "#c6c6c7",
-        "primary-container": "#d4d4d4",
         "error-container": "#93000a",
-        "primary-fixed-dim": "#454747",
-        "surface-container-highest": "#353534",
-        "on-primary-container": "#000000",
-        "outline": "#919191",
-        "surface-container-lowest": "#0e0e0e",
-        "on-error-container": "#ffdad6",
-        "inverse-primary": "#5d5f5f",
-        "on-background": "#e5e2e1",
-        "inverse-surface": "#e5e2e1",
         "on-error": "#690005",
-        "background": "#131313",
-        "secondary-fixed-dim": "#aaabab",
-        "on-tertiary-container": "#000000",
-        "secondary": "#c6c6c7",
-        "on-secondary": "#1a1c1c",
-        "outline-variant": "#474747",
-        "on-primary": "#1a1c1c",
-        "on-secondary-container": "#e2e2e2",
-        "on-primary-fixed": "#ffffff",
-        "on-tertiary": "#1b1b1b",
-        "on-primary-fixed-variant": "#e2e2e2"
+        "on-error-container": "#ffdad6"
       },
       fontFamily: {
         "headline": ["Manrope", "sans-serif"],
@@ -62,9 +75,9 @@ export default {
         "label": ["Inter", "sans-serif"]
       },
       borderRadius: {
-        "DEFAULT": "0px",
-        "lg": "0px",
-        "xl": "0px",
+        "DEFAULT": "16px",
+        "lg": "20px",
+        "xl": "28px",
         "full": "9999px"
       },
     },

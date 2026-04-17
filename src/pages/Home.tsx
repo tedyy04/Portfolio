@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { portfolioCategories, portfolioItems } from '../data/portfolioItems';
 import PortfolioGrid from '../components/PortfolioGrid';
+import Reveal from '../components/Reveal';
 
 function xmur3(str: string) {
   let h = 1779033703 ^ str.length;
@@ -58,14 +59,14 @@ export default function Home() {
     <main className="pt-40 pb-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full">
       <PortfolioGrid items={items} />
 
-      <section className="mt-40 mb-20 text-center max-w-2xl mx-auto">
+      <Reveal className="mt-40 mb-20 text-center max-w-2xl mx-auto glass-panel rounded-2xl px-8 py-12">
         <h2 className="font-headline text-4xl font-extrabold tracking-tighter mb-8 text-primary">
           THE CINEMATIC NEGATIVE
         </h2>
-        <p className="font-body text-sm leading-relaxed text-outline">
+        <p className="font-body text-sm leading-relaxed text-on-surface-variant">
           Capturing the quiet, focused intensity of the modern world. Every frame is a narrative preserved in obsidian layers. A private gallery for the discerning eye.
         </p>
-      </section>
+      </Reveal>
 
     </main>
   );

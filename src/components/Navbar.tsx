@@ -1,14 +1,10 @@
 import { Link, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { portfolioCategories } from '../data/portfolioItems';
 
 export default function Navbar() {
   const location = useLocation();
   const [categoryOpen, setCategoryOpen] = useState(false);
-
-  useEffect(() => {
-    setCategoryOpen(false);
-  }, [location.pathname]);
 
   const categoryNavItems = portfolioCategories
     .map((c) => ({
@@ -24,12 +20,12 @@ export default function Navbar() {
   const isCategorySectionActive = location.pathname.startsWith('/category/');
 
   const navItemClass = (isActive: boolean) =>
-    `inline-flex items-center align-middle leading-none font-body text-[10px] tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 hover:text-primary border-b pb-1 ${
+    `liquid-hover liquid-focus inline-flex items-center align-middle leading-none font-body text-[10px] tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 hover:text-primary border-b pb-1 ${
       isActive ? 'text-primary border-primary' : 'text-outline border-transparent'
     }`;
 
   return (
-    <nav className="fixed top-0 w-full flex flex-col items-center py-8 px-6 md:px-12 bg-[#131313]/70 backdrop-blur-md z-50">
+    <nav className="fixed top-0 w-full flex flex-col items-center py-6 px-6 md:px-12 z-50 glass-nav">
       <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-6">
         <Link
           to="/"
@@ -63,7 +59,7 @@ export default function Navbar() {
 
             <div
               role="menu"
-              className={`absolute left-1/2 top-full -translate-x-1/2 min-w-44 rounded-md border border-outline-variant/10 bg-surface/90 backdrop-blur-md pt-3 pb-2 transition-all duration-200 ${
+              className={`absolute left-1/2 top-full -translate-x-1/2 min-w-44 rounded-xl glass-panel bg-surface/30 pt-3 pb-2 transition-all duration-200 ${
                 categoryOpen
                   ? 'visible opacity-100 translate-y-0'
                   : 'invisible opacity-0 translate-y-2'
@@ -77,7 +73,7 @@ export default function Navbar() {
                     to={item.path}
                     role="menuitem"
                     onClick={() => setCategoryOpen(false)}
-                    className={`block px-4 py-2 font-body text-[10px] tracking-[0.1em] uppercase transition-colors duration-200 hover:text-primary ${
+                    className={`liquid-focus block mx-2 px-3 py-2 rounded-lg font-body text-[10px] tracking-[0.1em] uppercase transition-colors duration-200 hover:text-primary hover:bg-surface/[0.18] focus-visible:bg-surface/[0.18] ${
                       isActive ? 'text-primary' : 'text-outline'
                     }`}
                   >

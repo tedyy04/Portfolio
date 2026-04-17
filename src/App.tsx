@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -17,16 +18,58 @@ function ScrollToTop() {
 
 function AnimatedRoutes() {
   const location = useLocation();
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const contentRef = useRef<HTMLDivElement | null>(null);
+
+  useLayoutEffect(() => {
+    const overlay = overlayRef.current;
+    const content = contentRef.current;
+    if (!overlay || !content) return;
+
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) {
+      gsap.set(overlay, { autoAlpha: 0 });
+      gsap.set(content, { autoAlpha: 1, y: 0, filter: 'none' });
+      return;
+    }
+
+    gsap.killTweensOf([overlay, content]);
+
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    tl.set(overlay, { autoAlpha: 0 })
+      .set(content, { autoAlpha: 0, y: 10, filter: 'blur(10px)' })
+      .to(overlay, { autoAlpha: 1, duration: 0.12, ease: 'power2.out' }, 0)
+      .to(overlay, { autoAlpha: 0, duration: 0.38, ease: 'power2.out' }, 0.14)
+      .to(content, { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.58 }, 0.05);
+
+    return () => {
+      tl.kill();
+    };
+  }, [location.pathname]);
+
   return (
-    <div key={location.pathname} className="page-enter">
-      <Routes location={location}>
-        <Route path="/" element={<Home />} />
-        <Route path="/category/:category" element={<Category />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+    <div className="relative">
+      <div
+        ref={overlayRef}
+        aria-hidden="true"
+        className="fixed inset-0 pointer-events-none z-[60] opacity-0 liquid-route-overlay"
+      />
+      <div ref={contentRef}>
+        <Routes location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/category/:category" element={<Category />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </div>
   );
+}
+
+function NavbarWithRouteReset() {
+  const location = useLocation();
+  return <Navbar key={location.pathname} />;
 }
 
 function App() {
@@ -61,7 +104,7 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <ScrollToTop />
-        <Navbar />
+        <NavbarWithRouteReset />
         <audio ref={audioRef} src="/audio/background.mp3" loop preload="none" autoPlay />
         <AnimatedRoutes />
         <Footer />

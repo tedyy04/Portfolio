@@ -7,8 +7,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-surface border-t border-outline-variant/10 py-20 px-6 mt-24 w-full">
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12">
+    <footer className="mt-24 w-full px-6 pb-24">
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12 py-16">
         <div className="flex gap-12">
           {links.map((link) => (
             <a
@@ -16,13 +16,13 @@ export default function Footer() {
               href={link.href}
               target={link.external ? '_blank' : undefined}
               rel={link.external ? 'noreferrer' : undefined}
-              className="font-body text-[10px] tracking-[0.1em] uppercase text-[#919191] hover:text-primary transition-colors duration-300"
+              className="liquid-hover liquid-focus font-body text-[10px] tracking-[0.1em] uppercase text-on-surface-variant hover:text-primary transition-colors duration-300"
             >
               {link.label}
             </a>
           ))}
         </div>
-        <p className="font-body text-[10px] tracking-[0.1em] uppercase text-[#919191]">
+        <p className="font-body text-[10px] tracking-[0.1em] uppercase text-on-surface-variant">
           © T3D.FOTO ALL RIGHTS RESERVED
         </p>
       </div>

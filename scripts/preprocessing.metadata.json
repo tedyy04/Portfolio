@@ -168,7 +168,7 @@
     "notes": ""
   },
   "ted_272.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Together we meet",
@@ -210,7 +210,7 @@
     "notes": ""
   },
   "ted_277.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "In Between Moments",
@@ -251,8 +251,50 @@
     },
     "notes": ""
   },
-  "ted_286.jpeg": {
+  "ted_282.jpeg": {
     "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 282",
+      "alt": "Portfolio image TED 282",
+      "exif": {
+        "shutterSpeed": "1/160",
+        "iso": 640,
+        "aperture": "f/2.8",
+        "camera": "OLYMPUS IMAGING CORP. E-M1",
+        "lens": "LUMIX G VARIO 35-100/F2.8",
+        "focalLengthMm": 100,
+        "focalLength35Mm": 200,
+        "width": 2400,
+        "height": 1631,
+        "flashFired": false
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/160",
+      "iso": 640,
+      "aperture": "f/2.8",
+      "camera": "OLYMPUS IMAGING CORP. E-M1",
+      "lens": "LUMIX G VARIO 35-100/F2.8",
+      "focalLengthMm": 100,
+      "focalLength35Mm": 200,
+      "width": 2400,
+      "height": 1631,
+      "flashFired": false
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_286.jpeg": {
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Through My Lens",
@@ -294,7 +336,7 @@
     "notes": ""
   },
   "ted_352.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Golden Hour People at Creative Park",
@@ -336,7 +378,7 @@
     "notes": ""
   },
   "ted_401.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Quiet Reflections",
@@ -419,8 +461,92 @@
     },
     "notes": ""
   },
-  "ted_531.jpeg": {
+  "ted_490.jpeg": {
     "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 490",
+      "alt": "Portfolio image TED 490",
+      "exif": {
+        "shutterSpeed": "1/80",
+        "iso": 800,
+        "aperture": "f/4",
+        "camera": "Canon EOS R5",
+        "lens": "RF50mm F1.8 STM",
+        "focalLengthMm": 50,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1350,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/80",
+      "iso": 800,
+      "aperture": "f/4",
+      "camera": "Canon EOS R5",
+      "lens": "RF50mm F1.8 STM",
+      "focalLengthMm": 50,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1350,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_528.jpeg": {
+    "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 528",
+      "alt": "Portfolio image TED 528",
+      "exif": {
+        "shutterSpeed": "1/60",
+        "iso": 1250,
+        "aperture": "f/1.8",
+        "camera": "Canon EOS RP",
+        "lens": "RF50mm F1.8 STM",
+        "focalLengthMm": 50,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1600,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/60",
+      "iso": 1250,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "RF50mm F1.8 STM",
+      "focalLengthMm": 50,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1600,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_531.jpeg": {
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "We Grew Here",
@@ -462,7 +588,7 @@
     "notes": ""
   },
   "ted_533.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "This Was Us",
@@ -545,8 +671,92 @@
     },
     "notes": ""
   },
-  "ted_624.jpeg": {
+  "ted_576.jpeg": {
     "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 576",
+      "alt": "Portfolio image TED 576",
+      "exif": {
+        "shutterSpeed": null,
+        "iso": null,
+        "aperture": null,
+        "camera": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1538,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": null,
+      "iso": null,
+      "aperture": null,
+      "camera": null,
+      "lens": null,
+      "focalLengthMm": null,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1538,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_580.jpeg": {
+    "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 580",
+      "alt": "Portfolio image TED 580",
+      "exif": {
+        "shutterSpeed": null,
+        "iso": null,
+        "aperture": null,
+        "camera": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "focalLength35Mm": null,
+        "width": 1600,
+        "height": 2400,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": null,
+      "iso": null,
+      "aperture": null,
+      "camera": null,
+      "lens": null,
+      "focalLengthMm": null,
+      "focalLength35Mm": null,
+      "width": 1600,
+      "height": 2400,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_624.jpeg": {
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Running with the Wind",
@@ -671,8 +881,50 @@
     },
     "notes": ""
   },
-  "ted_687.jpeg": {
+  "ted_66.jpeg": {
     "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 66",
+      "alt": "Portfolio image TED 66",
+      "exif": {
+        "shutterSpeed": "1/60",
+        "iso": 4000,
+        "aperture": "f/4",
+        "camera": "Canon EOS R5",
+        "lens": "RF70-200mm F4 L IS USM",
+        "focalLengthMm": 200,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1600,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/60",
+      "iso": 4000,
+      "aperture": "f/4",
+      "camera": "Canon EOS R5",
+      "lens": "RF70-200mm F4 L IS USM",
+      "focalLengthMm": 200,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1600,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_687.jpeg": {
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Bitexco at Dusk",
@@ -743,6 +995,132 @@
       "focalLength35Mm": null,
       "width": 6240,
       "height": 4160,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_698.jpeg": {
+    "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 698",
+      "alt": "Portfolio image TED 698",
+      "exif": {
+        "shutterSpeed": "1/250",
+        "iso": 100,
+        "aperture": "f/1.4",
+        "camera": "Canon EOS RP",
+        "lens": "85mm F1.4 DG HSM | Art 016",
+        "focalLengthMm": 85,
+        "focalLength35Mm": null,
+        "width": 1600,
+        "height": 2400,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/250",
+      "iso": 100,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "85mm F1.4 DG HSM | Art 016",
+      "focalLengthMm": 85,
+      "focalLength35Mm": null,
+      "width": 1600,
+      "height": 2400,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_701.jpeg": {
+    "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 701",
+      "alt": "Portfolio image TED 701",
+      "exif": {
+        "shutterSpeed": null,
+        "iso": null,
+        "aperture": null,
+        "camera": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1348,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": null,
+      "iso": null,
+      "aperture": null,
+      "camera": null,
+      "lens": null,
+      "focalLengthMm": null,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1348,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_735.jpeg": {
+    "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 735",
+      "alt": "Portfolio image TED 735",
+      "exif": {
+        "shutterSpeed": "1/200",
+        "iso": 125,
+        "aperture": "f/1.4",
+        "camera": "Canon EOS RP",
+        "lens": "85mm F1.4 DG HSM | Art 016",
+        "focalLengthMm": 85,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1600,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/200",
+      "iso": 125,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "85mm F1.4 DG HSM | Art 016",
+      "focalLengthMm": 85,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1600,
       "flashFired": null
     },
     "exifFound": true,
@@ -839,8 +1217,92 @@
     },
     "notes": ""
   },
-  "ted_761.jpeg": {
+  "ted_75.jpeg": {
     "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 75",
+      "alt": "Portfolio image TED 75",
+      "exif": {
+        "shutterSpeed": "1/80",
+        "iso": 1600,
+        "aperture": "f/5.6",
+        "camera": "Canon EOS 700D",
+        "lens": "EF-S18-135mm f/3.5-5.6 IS STM",
+        "focalLengthMm": 113,
+        "focalLength35Mm": null,
+        "width": 1600,
+        "height": 2400,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": "1/80",
+      "iso": 1600,
+      "aperture": "f/5.6",
+      "camera": "Canon EOS 700D",
+      "lens": "EF-S18-135mm f/3.5-5.6 IS STM",
+      "focalLengthMm": 113,
+      "focalLength35Mm": null,
+      "width": 1600,
+      "height": 2400,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_754.jpeg": {
+    "present": true,
+    "updatedAt": "2026-04-17T05:36:09.092Z",
+    "suggested": {
+      "label": "TED 754",
+      "alt": "Portfolio image TED 754",
+      "exif": {
+        "shutterSpeed": null,
+        "iso": null,
+        "aperture": null,
+        "camera": null,
+        "lens": null,
+        "focalLengthMm": null,
+        "focalLength35Mm": null,
+        "width": 2400,
+        "height": 1600,
+        "flashFired": null
+      }
+    },
+    "overrideSnapshot": null,
+    "exifExtracted": {
+      "shutterSpeed": null,
+      "iso": null,
+      "aperture": null,
+      "camera": null,
+      "lens": null,
+      "focalLengthMm": null,
+      "focalLength35Mm": null,
+      "width": 2400,
+      "height": 1600,
+      "flashFired": null
+    },
+    "exifFound": true,
+    "draft": {
+      "label": "",
+      "alt": "",
+      "category": "",
+      "tags": "",
+      "exif": {}
+    },
+    "notes": ""
+  },
+  "ted_761.jpeg": {
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "We Stand Here",
@@ -966,7 +1428,7 @@
     "notes": ""
   },
   "ted_86.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "No Bad Days",
@@ -1050,7 +1512,7 @@
     "notes": ""
   },
   "ted_880.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Simple Joys",
@@ -1092,7 +1554,7 @@
     "notes": ""
   },
   "ted_903.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "A Place I’ll Miss",
@@ -1134,7 +1596,7 @@
     "notes": ""
   },
   "ted_943.jpeg": {
-    "present": true,
+    "present": false,
     "updatedAt": "2026-04-09T07:15:19.025Z",
     "suggested": {
       "label": "Still There",

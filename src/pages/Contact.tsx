@@ -75,7 +75,7 @@ export default function Contact() {
         </div>
 
         <div className="md:col-span-7">
-          <form className="space-y-12" onSubmit={handleSubmit}>
+          <form className="space-y-8" onSubmit={handleSubmit}>
             <div className="group relative">
               <label htmlFor="name" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-primary transition-colors">Name</label>
               <input
@@ -83,7 +83,7 @@ export default function Contact() {
                 id="name"
                 name="name"
                 placeholder="Your full name"
-                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 text-on-surface placeholder:text-surface-container-highest transition-all duration-500"
+                className="glass-input mt-3 px-4 py-4 transition-all duration-500"
               />
             </div>
             <div className="group relative">
@@ -93,7 +93,7 @@ export default function Contact() {
                 id="email"
                 name="email"
                 placeholder="email@example.com"
-                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 text-on-surface placeholder:text-surface-container-highest transition-all duration-500"
+                className="glass-input mt-3 px-4 py-4 transition-all duration-500"
               />
             </div>
             <div className="group relative">
@@ -101,7 +101,7 @@ export default function Contact() {
               <select
                 id="subject"
                 name="subject"
-                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 text-on-surface appearance-none transition-all duration-500"
+                className="glass-input mt-3 px-4 py-4 appearance-none transition-all duration-500"
               >
                 <option className="bg-surface text-on-surface">Portrait</option>
                 <option className="bg-surface text-on-surface">Concept / Creative</option>
@@ -116,13 +116,13 @@ export default function Contact() {
                 name="message"
                 rows={4}
                 placeholder="Describe your project or vision"
-                className="w-full bg-transparent border-t-0 border-l-0 border-r-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 text-on-surface placeholder:text-surface-container-highest resize-none transition-all duration-500"
+                className="glass-input mt-3 px-4 py-4 resize-none transition-all duration-500"
               ></textarea>
             </div>
-            <div className="pt-8">
+            <div className="pt-6">
               <button
                 type="submit"
-                className="group flex items-center gap-4 bg-primary text-on-primary px-12 py-5 font-label text-[11px] tracking-[0.2em] uppercase font-bold hover:bg-secondary transition-all duration-300"
+                className="group glass-button liquid-hover"
               >
                 Send Message
                 <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -133,7 +133,7 @@ export default function Contact() {
       </div>
 
       <section className="w-full max-w-7xl mt-48 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="relative aspect-video overflow-hidden bg-surface-container-low group">
+        <div className="relative aspect-video overflow-hidden rounded-2xl group liquid-hover">
           <img
             src="/images/concept/ted_142.jpeg"
             alt="Pre-grad Concepts"
@@ -143,7 +143,7 @@ export default function Contact() {
             <span className="font-label text-[10px] tracking-[0.2em] text-primary uppercase">Pre-grad Concepts</span>
           </div>
         </div>
-        <div className="relative aspect-video overflow-hidden bg-surface-container-low group">
+        <div className="relative aspect-video overflow-hidden rounded-2xl group liquid-hover">
           <img
             src="/images/concept/ted_761.jpeg"
             alt="Áo Dài Concept"
