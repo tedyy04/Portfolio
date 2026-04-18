@@ -367,51 +367,53 @@ export default function Lightbox({
         </button>
       </header>
 
-      <section className="flex-grow min-h-0 relative flex items-center justify-center px-[5%] md:px-[15%] py-8 md:py-10">
+      <section className="flex-grow min-h-0 relative">
         <button
           onClick={handlePrev}
-          className="absolute left-5 md:left-10 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
+          className="absolute left-5 md:left-10 top-1/2 -translate-y-1/2 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
         >
           <span className="material-symbols-outlined block leading-none text-3xl md:text-[34px] font-extralight">chevron_left</span>
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-5 md:right-10 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
+          className="absolute right-5 md:right-10 top-1/2 -translate-y-1/2 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
         >
           <span className="material-symbols-outlined block leading-none text-3xl md:text-[34px] font-extralight">chevron_right</span>
         </button>
 
-        <div className="relative w-full h-full flex items-center justify-center group">
-          <div className="relative w-fit max-w-full mx-auto">
-            <img
-              ref={mainImageRef}
-              src={currentItem.src}
-              alt={currentItem.alt}
-              className="relative z-10 block mx-auto object-contain max-h-[70vh] max-w-full w-auto shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.01]"
-            />
+        <div className="lightbox-scroll h-full overflow-y-auto px-[5%] md:px-[15%] py-8 md:py-10">
+          <div className="relative w-full min-h-full flex items-start justify-center group">
+            <div className="relative w-fit max-w-full mx-auto">
+              <img
+                ref={mainImageRef}
+                src={currentItem.src}
+                alt={currentItem.alt}
+                className="relative z-10 block mx-auto object-contain max-h-[70vh] max-w-full w-auto shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+              />
 
-            <div ref={captionRef} className="relative z-10 mt-6 md:mt-7 flex flex-col md:flex-row md:items-end justify-between gap-8 w-full min-w-0">
-              <div className="min-w-0">
-                <div className="flex items-center gap-3 min-w-0 mb-2">
-                  <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary tracking-tight leading-none min-w-0">
-                    {currentItem.label}
-                  </h2>
-                  {currentItem.tags?.[0] && (
-                    <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase flex-shrink-0">
-                      {currentItem.tags[0]}
-                    </span>
-                  )}
+              <div ref={captionRef} className="relative z-10 mt-6 md:mt-7 flex flex-col md:flex-row md:items-end justify-between gap-8 w-full min-w-0">
+                <div className="min-w-0">
+                  <div className="flex items-center gap-3 min-w-0 mb-2">
+                    <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary tracking-tight leading-none min-w-0">
+                      {currentItem.label}
+                    </h2>
+                    {currentItem.tags?.[0] && (
+                      <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase flex-shrink-0">
+                        {currentItem.tags[0]}
+                      </span>
+                    )}
+                  </div>
+                  <p className="font-body text-[13px] text-on-surface-variant leading-relaxed break-words max-w-prose">
+                    {currentItem.alt}
+                  </p>
                 </div>
-                <p className="font-body text-[13px] text-on-surface-variant leading-relaxed break-words max-w-prose">
-                  {currentItem.alt}
-                </p>
-              </div>
 
-              <div className="flex flex-col items-start md:items-end gap-2 min-w-0">
-                <span className="font-label text-[10px] tracking-[0.15em] text-on-surface-variant uppercase">TECHNICAL SPECS</span>
-                <div className="flex flex-col gap-1 min-w-0">
-                  <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{cameraLensLine}</span>
-                  <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{exposureLine}</span>
+                <div className="flex flex-col items-start md:items-end gap-2 min-w-0">
+                  <span className="font-label text-[10px] tracking-[0.15em] text-on-surface-variant uppercase">TECHNICAL SPECS</span>
+                  <div className="flex flex-col gap-1 min-w-0">
+                    <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{cameraLensLine}</span>
+                    <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{exposureLine}</span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -187,6 +187,12 @@
     @apply inline-flex items-center rounded-full px-2 py-0.5 bg-surface/25 backdrop-blur-md border border-outline-variant/45;
   }
 
+  .lightbox-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+  }
+
   .glass-frame {
     @apply relative overflow-hidden bg-surface/[0.08] backdrop-blur-sm border border-outline-variant/45;
     isolation: isolate;
