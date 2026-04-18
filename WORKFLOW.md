@@ -108,6 +108,14 @@ Chạy:
 npm run pre:apply
 ```
 
+Mặc định, sau khi apply xong thì script sẽ **reset** `scripts/preprocessing.metadata.json` về `{}` để tránh file phình (không giữ thông tin ảnh cũ nữa).
+
+Nếu bạn muốn giữ lại metadata (không reset) để tiếp tục chỉnh sửa, chạy:
+
+```bash
+npm run pre:apply -- --keep-metadata
+```
+
 Script sẽ update:
 
 - `scripts/portfolio.overrides.json`

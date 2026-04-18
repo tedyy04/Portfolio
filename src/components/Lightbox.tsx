@@ -2,6 +2,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import { createPortal } from 'react-dom';
 import type { ExifSummary } from '../data/portfolioItems';
 import { getExifSummary } from '../utils/exif';
+import { getDeviceId } from '../utils/deviceId';
 import gsap from 'gsap';
 
 type LightboxOrigin = {
@@ -34,7 +35,14 @@ export default function Lightbox({
   onConsumeOrigin,
 }: LightboxProps) {
   const [runtimeExifBySrc, setRuntimeExifBySrc] = useState<{ src: string; exif: ExifSummary | null } | null>(null);
+  const [stats, setStats] = useState<{ views: number | null; likes: number | null; liked: boolean }>(() => ({
+    views: null,
+    likes: null,
+    liked: false,
+  }));
+  const [likePending, setLikePending] = useState(false);
   const mainImageRef = useRef<HTMLImageElement | null>(null);
+  const captionRef = useRef<HTMLDivElement | null>(null);
 
   const portalTarget = useMemo(() => {
     if (typeof document === 'undefined') return null;
@@ -170,6 +178,35 @@ export default function Lightbox({
     };
   }, [currentItem?.alt, currentItem?.src, onConsumeOrigin, origin]);
 
+  useLayoutEffect(() => {
+    const img = mainImageRef.current;
+    const caption = captionRef.current;
+    if (!img) return;
+
+    const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    // Don't fight the origin-zoom animation.
+    if (origin && currentItem?.src && origin.src === currentItem.src) return;
+
+    const targets = [img, caption].filter(Boolean);
+    gsap.killTweensOf(targets);
+
+    gsap.fromTo(
+      img,
+      { autoAlpha: 0, filter: 'blur(10px)', scale: 1.01 },
+      { autoAlpha: 1, filter: 'blur(0px)', scale: 1, duration: 0.38, ease: 'power2.out' }
+    );
+
+    if (caption) {
+      gsap.fromTo(
+        caption,
+        { autoAlpha: 0, y: 10, filter: 'blur(10px)' },
+        { autoAlpha: 1, y: 0, filter: 'blur(0px)', duration: 0.46, ease: 'power2.out', delay: 0.05 }
+      );
+    }
+  }, [currentItem?.src, origin]);
+
   useEffect(() => {
     let cancelled = false;
 
@@ -211,16 +248,115 @@ export default function Lightbox({
     return { ...(runtimeExif ?? {}), ...(itemExif ?? {}) } as ExifSummary;
   }, [runtimeExif, itemExif]);
 
+  useEffect(() => {
+    let cancelled = false;
+
+    const id = String(currentItem?.id ?? '').trim();
+    if (!id) return;
+
+    const deviceId = getDeviceId() ?? undefined;
+
+    fetch('/api/view', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, deviceId }),
+    })
+      .then(async (r) => {
+        if (!r.ok) throw new Error('Failed');
+        return (await r.json()) as { views: number; likes: number; liked: boolean };
+      })
+      .then((data) => {
+        if (cancelled) return;
+        setStats({ views: data.views ?? 0, likes: data.likes ?? 0, liked: Boolean(data.liked) });
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setStats((prev) => ({ ...prev, views: prev.views ?? 0, likes: prev.likes ?? 0 }));
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [currentItem?.id]);
+
+  const { cameraLensLine, exposureLine } = useMemo(() => {
+    const cameraLensParts: string[] = [];
+    if (exif?.camera) cameraLensParts.push(exif.camera);
+    if (exif?.lens) cameraLensParts.push(exif.lens);
+
+    const exposureParts: string[] = [];
+    if (exif?.aperture) exposureParts.push(exif.aperture);
+    if (exif?.shutterSpeed) exposureParts.push(exif.shutterSpeed);
+    if (typeof exif?.iso === 'number') exposureParts.push(`ISO ${exif.iso}`);
+
+    return {
+      cameraLensLine: cameraLensParts.length ? cameraLensParts.join(' | ') : '—',
+      exposureLine: exposureParts.length ? exposureParts.join(' | ') : '—',
+    };
+  }, [exif]);
+
+  const handleToggleLike = useCallback(() => {
+    const id = String(currentItem?.id ?? '').trim();
+    if (!id) return;
+    if (likePending) return;
+
+    const deviceId = getDeviceId();
+    if (!deviceId) return;
+
+    setLikePending(true);
+
+    fetch('/api/like', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, deviceId }),
+    })
+      .then(async (r) => {
+        if (!r.ok) throw new Error('Failed');
+        return (await r.json()) as { views: number; likes: number; liked: boolean };
+      })
+      .then((data) => {
+        setStats({ views: data.views ?? 0, likes: data.likes ?? 0, liked: Boolean(data.liked) });
+      })
+      .catch(() => {
+        // Keep previous counts on error.
+      })
+      .finally(() => {
+        setLikePending(false);
+      });
+  }, [currentItem?.id, likePending]);
+
   if (!portalTarget) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-[1000] flex flex-col bg-surface-container-lowest/90 backdrop-blur-xl">
-      <header className="flex justify-between items-center w-full px-8 py-8 md:px-12">
+    <div className="fixed inset-0 z-[1000] flex flex-col bg-surface-container-lowest/85 backdrop-blur-sm">
+      <header className="flex justify-between items-center w-full px-8 py-6 md:px-12 md:py-7">
         <div className="flex items-center gap-6">
           <span className="text-xs font-label tracking-[0.2em] text-on-surface-variant uppercase">
             {String(currentIndex + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}
           </span>
           <h1 className="font-headline font-extrabold text-xl tracking-tighter text-primary">T3D.FOTO</h1>
+
+          <div className="flex items-center gap-1">
+            <span className="glass-chip-compact font-label text-[9px] tracking-[0.16em] uppercase text-on-surface-variant">
+              <span className="material-symbols-outlined text-[14px] leading-none">visibility</span>
+              {typeof stats.views === 'number' ? stats.views.toLocaleString() : '—'}
+            </span>
+
+            <button
+              type="button"
+              onClick={handleToggleLike}
+              aria-pressed={stats.liked}
+              disabled={likePending}
+              className={`glass-chip-compact liquid-focus font-label text-[9px] tracking-[0.16em] uppercase transition-colors disabled:opacity-60 disabled:cursor-not-allowed ${
+                stats.liked ? 'border-primary/60 text-primary' : 'text-on-surface-variant'
+              }`}
+            >
+              <span className="material-symbols-outlined text-[14px] leading-none">
+                {stats.liked ? 'favorite' : 'favorite_border'}
+              </span>
+              {typeof stats.likes === 'number' ? stats.likes.toLocaleString() : '—'}
+            </button>
+          </div>
         </div>
         <button
           onClick={onClose}
@@ -231,7 +367,7 @@ export default function Lightbox({
         </button>
       </header>
 
-      <section className="flex-grow relative flex items-center justify-center px-[5%] md:px-[15%] pb-24 pt-8">
+      <section className="flex-grow min-h-0 relative flex items-center justify-center px-[5%] md:px-[15%] py-8 md:py-10">
         <button
           onClick={handlePrev}
           className="absolute left-5 md:left-10 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
@@ -251,70 +387,37 @@ export default function Lightbox({
               ref={mainImageRef}
               src={currentItem.src}
               alt={currentItem.alt}
-              className="block mx-auto object-contain max-h-[70vh] max-w-full w-auto shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+              className="relative z-10 block mx-auto object-contain max-h-[70vh] max-w-full w-auto shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.01]"
             />
 
-            <div className="mt-8 flex flex-col md:flex-row md:items-end justify-between gap-6 w-full min-w-0">
+            <div ref={captionRef} className="relative z-10 mt-6 md:mt-7 flex flex-col md:flex-row md:items-end justify-between gap-8 w-full min-w-0">
               <div className="min-w-0">
                 <div className="flex items-center gap-3 min-w-0 mb-2">
-                  <h2 className="font-headline text-2xl text-primary tracking-tight leading-none min-w-0">{currentItem.label}</h2>
+                  <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary tracking-tight leading-none min-w-0">
+                    {currentItem.label}
+                  </h2>
                   {currentItem.tags?.[0] && (
                     <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase flex-shrink-0">
                       {currentItem.tags[0]}
                     </span>
                   )}
                 </div>
-                <p className="font-body text-sm text-on-surface-variant leading-relaxed break-words">{currentItem.alt}</p>
+                <p className="font-body text-[13px] text-on-surface-variant leading-relaxed break-words max-w-prose">
+                  {currentItem.alt}
+                </p>
               </div>
 
-              <div className="flex flex-col items-start md:items-end border-l md:border-l-0 md:border-r border-outline-variant/30 pl-4 md:pl-0 md:pr-4 min-w-0">
+              <div className="flex flex-col items-start md:items-end gap-2 min-w-0">
                 <span className="font-label text-[10px] tracking-[0.15em] text-on-surface-variant uppercase">TECHNICAL SPECS</span>
-                <div className="flex flex-wrap gap-3 mt-1 md:justify-end">
-                  <span className="font-label text-[11px] text-primary tracking-wider break-words">
-                    {exif?.camera ?? '—'}
-                  </span>
-                  <span className="text-outline-variant">|</span>
-                  <span className="font-label text-[11px] text-primary tracking-wider break-words">
-                    {exif?.lens ?? '—'}
-                  </span>
-                </div>
-
-                <div className="flex flex-wrap gap-3 mt-2 md:justify-end">
-                  <span className="font-label text-[11px] text-primary tracking-wider break-words">
-                    {exif?.aperture ?? '—'}
-                  </span>
-                  <span className="text-outline-variant">|</span>
-                  <span className="font-label text-[11px] text-primary tracking-wider break-words">
-                    {exif?.shutterSpeed ?? '—'}
-                  </span>
-                  <span className="text-outline-variant">|</span>
-                  <span className="font-label text-[11px] text-primary tracking-wider break-words">
-                    {typeof exif?.iso === 'number' ? `ISO ${exif.iso}` : '—'}
-                  </span>
+                <div className="flex flex-col gap-1 min-w-0">
+                  <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{cameraLensLine}</span>
+                  <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{exposureLine}</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <footer className="mx-4 md:mx-6 mb-4 rounded-2xl glass-panel bg-surface/[0.18] py-5">
-        <div className="flex items-center gap-6 px-6 md:px-8 overflow-x-auto no-scrollbar">
-          {items.map((item, index) => (
-            <div
-              key={item.id}
-              onClick={() => onNavigate(index)}
-              className={`flex-shrink-0 w-20 aspect-square cursor-pointer transition-all rounded-xl overflow-hidden glass-frame ${
-                currentIndex === index
-                  ? 'border-2 border-primary opacity-100 grayscale-0 thumb-active'
-                  : 'grayscale opacity-40 hover:grayscale-0 hover:opacity-100'
-              }`}
-            >
-              <img src={item.src} alt={`Thumbnail ${index + 1}`} className="w-full h-full object-cover" />
-            </div>
-          ))}
-        </div>
-      </footer>
     </div>,
     portalTarget
   );

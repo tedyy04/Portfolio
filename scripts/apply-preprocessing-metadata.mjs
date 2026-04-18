@@ -5,6 +5,9 @@ import process from 'node:process';
 const METADATA_FILE = path.join(process.cwd(), 'scripts', 'preprocessing.metadata.json');
 const OVERRIDES_FILE = path.join(process.cwd(), 'scripts', 'portfolio.overrides.json');
 
+const KEEP_METADATA_FLAG = '--keep-metadata';
+const NO_RESET_FLAG = '--no-reset';
+
 function isObject(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
 }
@@ -41,6 +44,14 @@ function isMissingTags(value) {
   return false;
 }
 
+function pickPreferredTags(draftValue, suggestedValue) {
+  if (Array.isArray(draftValue) && draftValue.length > 0) return draftValue;
+  if (hasNonEmptyString(draftValue)) return String(draftValue).trim();
+  if (Array.isArray(suggestedValue) && suggestedValue.length > 0) return suggestedValue;
+  if (hasNonEmptyString(suggestedValue)) return String(suggestedValue).trim();
+  return undefined;
+}
+
 function mergeExifFillOnly(existingExif, draftExif) {
   const base = isObject(existingExif) ? { ...existingExif } : {};
   if (!isObject(draftExif)) return base;
@@ -56,6 +67,8 @@ function mergeExifFillOnly(existingExif, draftExif) {
 }
 
 async function main() {
+  const keepMetadata = process.argv.includes(KEEP_METADATA_FLAG) || process.argv.includes(NO_RESET_FLAG);
+
   const metadata = await readJson(METADATA_FILE);
   if (Object.keys(metadata).length === 0) {
     console.error('Missing or empty preprocessing.metadata.json. Run `npm run pre:meta` first.');
@@ -80,7 +93,7 @@ async function main() {
     const before = JSON.stringify(existing);
 
     // Strings: fill only if missing/empty. Prefer draft, then suggested.
-    const preferredCategory = pickPreferredString(draft.category, '');
+    const preferredCategory = pickPreferredString(draft.category, suggested.category);
     const preferredLabel = pickPreferredString(draft.label, suggested.label);
     const preferredAlt = pickPreferredString(draft.alt, suggested.alt);
 
@@ -95,19 +108,24 @@ async function main() {
     }
 
     // tags: allow string or string[]. Fill if missing/empty.
-    if (isMissingTags(existing.tags) && (typeof draft.tags === 'string' || Array.isArray(draft.tags))) {
-      existing.tags = draft.tags;
+    if (isMissingTags(existing.tags)) {
+      const preferredTags = pickPreferredTags(draft.tags, suggested.tags);
+      if (preferredTags !== undefined) existing.tags = preferredTags;
     }
 
     // hideOnHome: fill only if not set.
     if (existing.hideOnHome === undefined && typeof draft.hideOnHome === 'boolean') {
       existing.hideOnHome = draft.hideOnHome;
+    } else if (existing.hideOnHome === undefined && typeof suggested.hideOnHome === 'boolean') {
+      existing.hideOnHome = suggested.hideOnHome;
     }
 
-    // exif: fill per-field only. Prefer draft.exif, then exifExtracted.
-    const preferredExif = isObject(draft.exif) && Object.keys(draft.exif).length > 0
+    // exif: fill per-field only. Prefer draft.exif, then suggested.exif, then exifExtracted.
+    const preferredExif = (isObject(draft.exif) && Object.keys(draft.exif).length > 0)
       ? draft.exif
-      : exifExtracted;
+      : (isObject(suggested.exif) && Object.keys(suggested.exif).length > 0)
+        ? suggested.exif
+        : exifExtracted;
 
     if (preferredExif !== undefined) {
       existing.exif = mergeExifFillOnly(existing.exif, preferredExif);
@@ -129,9 +147,19 @@ async function main() {
 
   await writeJson(OVERRIDES_FILE, sorted);
 
+  if (!keepMetadata) {
+    await writeJson(METADATA_FILE, {});
+  }
+
   console.log(
     `Applied preprocessing metadata into overrides: changed=${changed} entries (touched=${touched}).`
   );
+
+  if (!keepMetadata) {
+    console.log(`Reset ${path.relative(process.cwd(), METADATA_FILE)} to keep preprocessing lightweight.`);
+  } else {
+    console.log(`Kept ${path.relative(process.cwd(), METADATA_FILE)} (flag: ${KEEP_METADATA_FLAG}).`);
+  }
 }
 
 await main();

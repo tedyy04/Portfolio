@@ -5,6 +5,36 @@
     "alt": "Event shift. Just me doing my thing. Grateful for the team..",
     "skipML": true
   },
+  "ted_106.jpeg": {
+    "label": "Midnight Campus",
+    "alt": "Late night at TDTU.",
+    "tags": "University",
+    "exif": {
+      "shutterSpeed": "1/13",
+      "iso": 6400,
+      "aperture": "f/8",
+      "camera": "Canon EOS R50",
+      "lens": "RF-S18-45mm F4.5-6.3 IS STM",
+      "focalLengthMm": 45,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  "ted_11.jpeg": {
+    "label": "Deep in Thought",
+    "alt": "The silent grind behind the scenes.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 200,
+      "aperture": "f/8",
+      "camera": "Canon EOS 5D Mark III",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 105,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_114.jpeg": {
     "tags": "",
     "label": "City on Fire",
@@ -18,6 +48,21 @@
       "focalLengthMm": 35,
       "width": 1550,
       "height": 1937
+    }
+  },
+  "ted_127.jpeg": {
+    "label": "Chasing Colors",
+    "alt": "木漏れ日 (Komorebi)",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/320",
+      "iso": 100,
+      "aperture": "f/7.1",
+      "camera": "Canon EOS RP",
+      "lens": "35mm F1.4 DG HSM | Art 012",
+      "focalLengthMm": 35,
+      "width": 1600,
+      "height": 2400
     }
   },
   "ted_129.jpeg": {
@@ -40,6 +85,20 @@
     "alt": "It’s not just a competition.",
     "exif": {
       "lens": "EF70-200mm f/2.8L IS II USM"
+    }
+  },
+  "ted_14.jpeg": {
+    "label": "Afterglow",
+    "alt": "A burning sky to wrap up the day.",
+    "tags": "University",
+    "exif": {
+      "width": 2400,
+      "height": 1800,
+      "camera":"Apple iPhone 15 Pro Max",
+      "lens":"iPhone 15 Pro Max back triple camera 15.66mm f/2.8",
+      "shutterSpeed":"1/60",
+      "aperture": "f/2.8",
+      "iso": 1000
     }
   },
   "ted_142.jpeg": {
@@ -70,6 +129,21 @@
       "focalLength35Mm": 120,
       "width": 2268,
       "height": 4032
+    }
+  },
+  "ted_16.jpeg": {
+    "label": "Old Souls",
+    "alt": "Film camera and wooden walls.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/60",
+      "iso": 640,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 1600,
+      "height": 2400
     }
   },
   "ted_178.jpeg": {
@@ -119,6 +193,21 @@
     "tags": "Wedding",
     "exif": {
       "camera": "Canon EOS 70D"
+    }
+  },
+  "ted_220.jpeg": {
+    "label": "Signed & Sealed",
+    "alt": "CEE Team & TED Team, leaving our little mark behind.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 320,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS R5",
+      "lens": "RF50mm F1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1350
     }
   },
   "ted_230.jpeg": {
@@ -250,6 +339,21 @@
       "iso": 100
     }
   },
+  "ted_316.jpeg": {
+    "label": "That's a Wrap!",
+    "alt": "Rap Nguoc Sang. The Gala crew.",
+    "tags": "Rạp Ngược Sáng",
+    "exif": {
+      "width": 2400,
+      "height": 1600,
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 24-105mm f/4L IS",
+      "shutterSpeed": "1/60",
+      "iso": 640,
+      "aperture": "f/4"
+
+    }
+  },
   "ted_321.jpeg": {
     "tags": "University",
     "category": "Scene",
@@ -269,6 +373,20 @@
       "focalLengthMm": 50,
       "width": 2400,
       "height": 1350
+    }
+  },
+  "ted_354.jpeg": {
+    "label": "Wide Open",
+    "alt": "Golden hour where the sand meets the water. Just breathing it all in.",
+    "tags": "Seashore",
+    "exif": {
+      "width": 2400,
+      "height": 1350,
+      "camera": "Canon EOS 70D",
+      "lens":"35mm F1.4 DG HSM | Art 012",
+      "shutterSpeed": "1/250",
+      "iso": 100,
+      "aperture": "f/8"
     }
   },
   "ted_398.jpeg": {
@@ -294,6 +412,20 @@
       "height": 1350
     }
   },
+  "ted_41.jpeg": {
+    "label": "Pure Joy",
+    "alt": "Moments like these.",
+    "tags": "TED DREAM 11",
+    "exif": {
+      "width": 2400,
+      "height": 1350,
+      "camera": "Canon EOS R5",
+      "lens": "RF50mm F1.8 STM",
+      "shutterSpeed": "1/250",
+      "iso": 2000,
+      "aperture": "f/2.8"
+    }
+  },
   "ted_412.jpeg": {
     "category": "Street",
     "label": "Through the Glass",
@@ -302,6 +434,34 @@
   "ted_420.jpeg": {
     "category": "Other",
     "hideOnHome": true
+  },
+  "ted_426.jpeg": {
+    "label": "Sundown Drifter",
+    "alt": "Golden hour, a lone figure, and the quiet. Perfect.",
+    "tags": "",
+    "exif": {
+      "width": 2400,
+      "height": 1600,
+      "camera": "Canon EOS 70D",
+      "lens":"35mm F1.4 DG HSM | Art 012",
+      "shutterSpeed": "1/125",
+      "aperture": "f/8",
+      "iso": 640
+    }
+  },
+  "ted_440.jpeg": {
+    "label": "Woven",
+    "alt": "A story told in silent touch",
+    "tags": "We",
+    "exif": {
+      "width": 2400,
+      "height": 1598,
+      "camera": "Canon EOS 700D",
+      "lens": "EF-S18-55mm f/3.5-5.6 IS STM",
+      "shutterSpeed": "1/60",
+      "iso": 1000,
+      "aperture": "f/3.5"
+    }
   },
   "ted_442.jpeg": {
     "category": "Concept",
@@ -314,6 +474,21 @@
       "aperture": "f/1.4",
       "shutterSpeed": "1/500",
       "iso": 100
+    }
+  },
+  "ted_444.jpeg": {
+    "label": "Piercing the Canopy",
+    "alt": "Catching the exact moment the light breaks through the leaves.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 400,
+      "aperture": "f/13",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_446.jpeg": {
@@ -375,6 +550,21 @@
       "height": 1350
     }
   },
+  "ted_514.jpeg": {
+    "label": "Echoes of Us",
+    "alt": "TED DREAM 11. Lost in their smiles",
+    "tags": "TED DREAM 11",
+    "exif": {
+      "shutterSpeed": "1/60",
+      "iso": 2500,
+      "aperture": "f/4.5",
+      "camera": "Canon EOS R5",
+      "lens": "RF50mm F1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1350
+    }
+  },
   "ted_528.jpeg": {
     "label": "Lights in the Dark",
     "alt": "A thousand quiet stars in one room.",
@@ -427,6 +617,20 @@
       "lens": "EF70-200mm f/2.8L IS II USM"
     }
   },
+  "ted_553.jpeg": {
+    "label": "Illuminated Milestones",
+    "alt": "Tangible proof of the sleepless nights and relentless pushing. We really left our mark here.",
+    "tags": "Rạp Ngược Sáng",
+    "exif": {
+      "width": 2400,
+      "height": 1600,
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 24-105mm f/4L IS",
+      "shutterSpeed": "1/125",
+      "aperture": "f/4",
+      "iso": 1250
+    }
+  },
   "ted_567.jpeg": {
     "tags": "Funiture",
     "label": "Corner Light",
@@ -440,6 +644,36 @@
       "focalLengthMm": 50,
       "width": 5448,
       "height": 3632
+    }
+  },
+  "ted_571.jpeg": {
+    "label": "Inner Circle",
+    "alt": "Capturing the purest of bonds.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/50",
+      "iso": 100,
+      "aperture": "f/3.5",
+      "lens": "XC16-50mmF3.5-5.6 OIS II",
+      "focalLengthMm": 16,
+      "focalLength35Mm": 24,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_574.jpeg": {
+    "label": "Art of Surrender",
+    "alt": "Total, unbothered peace.",
+    "tags": "Animals",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 1250,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 24-105mm f/4L IS",
+      "focalLengthMm": 92,
+      "width": 2400,
+      "height": 1347
     }
   },
   "ted_576.jpeg": {
@@ -462,7 +696,27 @@
     "tags": "",
     "exif": {
       "width": 1600,
-      "height": 2400
+      "height": 2400,
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "shutterSpeed": "1/200",
+      "iso": 400,
+      "aperture": "f/2.8"
+    }
+  },
+  "ted_584.jpeg": {
+    "label": "Paper & Sweat",
+    "alt": "It’s the quiet validation of all the behind-the-scenes hustle",
+    "tags": "Rạp Ngược Sáng",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 2000,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_61.jpeg": {
@@ -554,6 +808,21 @@
       "height": 1600
     }
   },
+  "ted_672.jpeg": {
+    "label": "Quiet Companions",
+    "alt": "Two generations just watching the afternoon slip by.",
+    "tags": "Animals",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 200,
+      "aperture": "f/6.3",
+      "camera": "Canon EOS 5D Mark III",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 40,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_674.jpeg": {
     "category": "Scene",
     "label": "Light on the Shelf",
@@ -593,7 +862,7 @@
   "ted_698.jpeg": {
     "label": "Main Character Energy",
     "alt": "Smiling like the ending was worth it.",
-    "tags": "",
+    "tags": "Graduation",
     "exif": {
       "shutterSpeed": "1/250",
       "iso": 100,
@@ -608,6 +877,7 @@
   "ted_700.jpeg": {
     "category": "Concept",
     "label": "Walking into the path",
+    "tags": "Graduation",
     "alt": "A quiet walk on the familiar green paths where it all began."
   },
   "ted_701.jpeg": {
@@ -634,6 +904,7 @@
     "label": "Thành An",
     "alt": "An's Graduation",
     "skipML": true,
+    "tags": "Graduation",
     "exif": {
       "camera": "Canon EOS RP",
       "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
@@ -704,14 +975,14 @@
   "ted_754.jpeg": {
     "label": "The Ones Who Made It Softer",
     "alt": "No spotlight felt brighter than this.",
-    "tags": "",
+    "tags": "Graduation",
     "exif": {
       "width": 2400,
       "height": 1600,
       "aperture": "f/2.8",
       "iso": 400,
       "shutterSpeed": "1/250",
-      "camera":"Canon EOS RP",
+      "camera": "Canon EOS RP",
       "lens": "85mm F1.4 DG HSM | Art 016"
     }
   },
@@ -745,6 +1016,36 @@
       "height": 2884
     }
   },
+  "ted_792.jpeg": {
+    "label": "Torn Realities",
+    "alt": "A wall pieced together by a hundred different stories.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 100,
+      "aperture": "f/3.5",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_809.jpeg": {
+    "label": "Into the Light",
+    "alt": "Arms around shoulders right before the rush begins.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/160",
+      "iso": 640,
+      "aperture": "f/3.5",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_832.jpeg": {
     "tags": "Nature",
     "label": "Where the Wind Goes",
@@ -758,6 +1059,50 @@
       "focalLengthMm": 50,
       "width": 6240,
       "height": 4160
+    }
+  },
+  "ted_834.jpeg": {
+    "label": "The Observer",
+    "alt": "Framing the one who frames the world.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 400,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "EF24-105mm f/4L IS USM",
+      "focalLengthMm": 105,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_843.jpeg": {
+    "label": "Sunlit Hideaway",
+    "alt": "Bản Coffee",
+    "tags": "Funiture",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 500,
+      "aperture": "f/1.8",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_859.jpeg": {
+    "label": "Unseen Pulse",
+    "alt": "The quiet, nerve-wracking intensity in the dark that keeps the entire show breathing.",
+    "tags": "",
+    "exif": {
+      "width": 2400,
+      "aperture": "f/4",
+      "iso": 4000,
+      "shutterSpeed": "1/30",
+      "camera": "Canon EOS 5D Mark III",
+      "lens":"Canon EF 24-105mm f/4L IS",
+      "height": 1600
     }
   },
   "ted_86.jpeg": {
@@ -788,6 +1133,21 @@
       "focalLengthMm": 105,
       "width": 4590,
       "height": 3060
+    }
+  },
+  "ted_877.jpeg": {
+    "label": "Soulful Soles",
+    "alt": "The miles, the hours, the exhaustion. These boots carried my weight and my heart today. Proud.",
+    "tags": "",
+    "exif": {
+      "shutterSpeed": "1/200",
+      "iso": 640,
+      "aperture": "f/7.1",
+      "camera": "Canon EOS RP",
+      "lens": "EF50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_880.jpeg": {
@@ -850,8 +1210,8 @@
   },
   "ted_945.jpeg": {
     "category": "Event",
-    "label": "TOP40 NDSV",
-    "alt": "",
+    "label": "Vũ Ngọc Bảo Khuê",
+    "alt": "TOP20 NDSV lần 5 TDTU",
     "exif": {
       "lens": "EF70-200mm f/2.8L IS II USM"
     }
@@ -861,11 +1221,6 @@
     "label": "Window Light & Bản",
     "tags": "Coffee",
     "alt": "Another aspect"
-  },
-  "ted_958.jpeg": {
-    "category": "Concept",
-    "label": "Her",
-    "alt": "Sunday wanderings."
   },
   "ted_959.jpeg": {
     "tags": "",
@@ -890,7 +1245,7 @@
   "ted_976.jpeg": {
     "category": "Event",
     "label": "Trần Tín Đạt",
-    "alt": "Nam Vương NDSV Lần 5 TDTU",
+    "alt": "Nam Vương NDSV lần 5 TDTU",
     "exif": {
       "lens": "35mm F1.4 DG HSM | Art 012"
     }
