@@ -370,13 +370,13 @@ export default function Lightbox({
       <section className="flex-grow min-h-0 relative">
         <button
           onClick={handlePrev}
-          className="absolute left-5 md:left-10 top-1/2 -translate-y-1/2 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
+          className="hidden md:flex absolute left-5 md:left-10 top-1/2 -translate-y-1/2 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame items-center justify-center text-on-surface-variant hover:text-primary transition-all"
         >
           <span className="material-symbols-outlined block leading-none text-3xl md:text-[34px] font-extralight">chevron_left</span>
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-5 md:right-10 top-1/2 -translate-y-1/2 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame flex items-center justify-center text-on-surface-variant hover:text-primary transition-all"
+          className="hidden md:flex absolute right-5 md:right-10 top-1/2 -translate-y-1/2 z-10 group w-14 h-14 md:w-16 md:h-16 rounded-full glass-frame items-center justify-center text-on-surface-variant hover:text-primary transition-all"
         >
           <span className="material-symbols-outlined block leading-none text-3xl md:text-[34px] font-extralight">chevron_right</span>
         </button>
