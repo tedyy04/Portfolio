@@ -60,17 +60,38 @@ export default function Album() {
   }
 
   if (resolvedAlbum) {
+    const cover = pickAlbumCover(resolvedAlbum);
+
     return (
       <main className="pt-40 pb-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full">
         <Reveal className="mb-10">
-          <div className="flex flex-col gap-2">
-            <h1 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-primary">
-              {resolvedAlbum.title}
-            </h1>
-            <p className="text-on-surface-variant font-body text-sm tracking-wide">
-              {resolvedAlbum.items.length} photos
-            </p>
-          </div>
+          <section className="relative overflow-hidden rounded-xl glass-frame">
+            <div className="w-full h-[220px] md:h-[320px] lg:h-[380px]">
+              {cover ? (
+                <img
+                  src={cover.src}
+                  alt={cover.alt}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              ) : (
+                <div className="w-full h-full bg-surface-container-low" />
+              )}
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
+
+            <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <h1 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-primary">
+                {resolvedAlbum.title}
+              </h1>
+              {resolvedAlbum.description ? (
+                <p className="mt-3 text-on-surface-variant font-body text-sm leading-relaxed max-w-2xl">
+                  {resolvedAlbum.description}
+                </p>
+              ) : null}
+            </div>
+          </section>
 
           <div className="mt-6">
             <Link
@@ -97,7 +118,7 @@ export default function Album() {
           Albums
         </h1>
         <p className="mt-4 text-on-surface-variant font-body text-sm leading-relaxed max-w-2xl">
-          Manually curated collections.
+          Featured Collection.
         </p>
       </Reveal>
 

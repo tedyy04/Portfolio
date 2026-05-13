@@ -17,3 +17,18 @@ export interface AlbumDefinition {
  * The active album system uses folder-driven generation from `public/albums`.
  */
 export const albums: AlbumDefinition[] = [];
+
+export interface AlbumMeta {
+  description?: string;
+}
+
+/**
+ * Optional album metadata keyed by generated album slug.
+ *
+ * Example slug: `our20s` for `/album/our20s`.
+ */
+export const albumMetaBySlug: Record<string, AlbumMeta> = {
+  our20s: {
+    description: 'Những khoảnh khắc của tuổi 20.',
+  },
+};
