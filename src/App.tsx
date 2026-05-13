@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Category from './pages/Category';
+import Album from './pages/Album';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
@@ -59,6 +60,8 @@ function AnimatedRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/category/:category" element={<Category />} />
+          <Route path="/album" element={<Album />} />
+          <Route path="/album/*" element={<Album />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

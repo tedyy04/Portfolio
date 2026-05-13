@@ -1,4 +1,7 @@
 {
+  "albums": {
+    "our20s/ted_443.jpeg": {"isCover": true}
+  },
   "ted_103.jpeg": {
     "category": "Event",
     "label": "Focus",
@@ -94,9 +97,9 @@
     "exif": {
       "width": 2400,
       "height": 1800,
-      "camera":"Apple iPhone 15 Pro Max",
-      "lens":"iPhone 15 Pro Max back triple camera 15.66mm f/2.8",
-      "shutterSpeed":"1/60",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back triple camera 15.66mm f/2.8",
+      "shutterSpeed": "1/60",
       "aperture": "f/2.8",
       "iso": 1000
     }
@@ -131,6 +134,20 @@
       "height": 4032
     }
   },
+  "ted_15.jpeg": {
+    "label": "TED 15",
+    "alt": "Portfolio image TED 15",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 200,
+      "aperture": "f/10",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_16.jpeg": {
     "label": "Old Souls",
     "alt": "Film camera and wooden walls.",
@@ -158,6 +175,20 @@
       "aperture": "f/2.8",
       "shutterSpeed": "1/160",
       "iso": 400
+    }
+  },
+  "ted_182.jpeg": {
+    "label": "TED 182",
+    "alt": "Portfolio image TED 182",
+    "exif": {
+      "shutterSpeed": "1/640",
+      "iso": 320,
+      "aperture": "f/2.8",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_184.jpeg": {
@@ -224,6 +255,20 @@
       "iso": 500
     }
   },
+  "ted_233.jpeg": {
+    "label": "TED 233",
+    "alt": "Portfolio image TED 233",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 200,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_242.jpeg": {
     "tags": "Nature",
     "label": "Clouds Below",
@@ -237,6 +282,20 @@
       "focalLengthMm": 50,
       "width": 6240,
       "height": 4161
+    }
+  },
+  "ted_245.jpeg": {
+    "label": "TED 245",
+    "alt": "Portfolio image TED 245",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 100,
+      "aperture": "f/2.2",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_247.jpeg": {
@@ -264,6 +323,20 @@
       "focalLengthMm": 50,
       "width": 3553,
       "height": 2369
+    }
+  },
+  "ted_254.jpeg": {
+    "label": "TED 254",
+    "alt": "Portfolio image TED 254",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 200,
+      "aperture": "f/5.6",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_272.jpeg": {
@@ -326,6 +399,20 @@
       "iso": 6400
     }
   },
+  "ted_291.jpeg": {
+    "label": "TED 291",
+    "alt": "Portfolio image TED 291",
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 100,
+      "aperture": "f/2.8",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_31.jpeg": {
     "category": "Concept",
     "label": "A Quiet Chapter",
@@ -351,7 +438,20 @@
       "shutterSpeed": "1/60",
       "iso": 640,
       "aperture": "f/4"
-
+    }
+  },
+  "ted_32.jpeg": {
+    "label": "TED 32",
+    "alt": "Portfolio image TED 32",
+    "exif": {
+      "shutterSpeed": "1/80",
+      "iso": 200,
+      "aperture": "f/5.6",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_321.jpeg": {
@@ -359,6 +459,14 @@
     "category": "Scene",
     "label": "Workspace Flow",
     "alt": "Beauty corner at Inspire Library"
+  },
+  "ted_337.jpeg": {
+    "label": "TED 337",
+    "alt": "Portfolio image TED 337",
+    "exif": {
+      "width": 2400,
+      "height": 1600
+    }
   },
   "ted_352.jpeg": {
     "label": "Golden Hour People at Creative Park",
@@ -383,10 +491,38 @@
       "width": 2400,
       "height": 1350,
       "camera": "Canon EOS 70D",
-      "lens":"35mm F1.4 DG HSM | Art 012",
+      "lens": "35mm F1.4 DG HSM | Art 012",
       "shutterSpeed": "1/250",
       "iso": 100,
       "aperture": "f/8"
+    }
+  },
+  "ted_375.jpeg": {
+    "label": "TED 375",
+    "alt": "Portfolio image TED 375",
+    "exif": {
+      "shutterSpeed": "1/800",
+      "iso": 100,
+      "aperture": "f/2.2",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  "ted_378.jpeg": {
+    "label": "TED 378",
+    "alt": "Portfolio image TED 378",
+    "exif": {
+      "shutterSpeed": "1/320",
+      "iso": 100,
+      "aperture": "f/2.2",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_398.jpeg": {
@@ -443,7 +579,7 @@
       "width": 2400,
       "height": 1600,
       "camera": "Canon EOS 70D",
-      "lens":"35mm F1.4 DG HSM | Art 012",
+      "lens": "35mm F1.4 DG HSM | Art 012",
       "shutterSpeed": "1/125",
       "aperture": "f/8",
       "iso": 640
@@ -475,6 +611,15 @@
       "shutterSpeed": "1/500",
       "iso": 100
     }
+  },
+  "ted_443.jpeg": {
+    "label": "TED 443",
+    "alt": "Portfolio image TED 443",
+    "exif": {
+      "width": 2400,
+      "height": 1600
+    }
+    
   },
   "ted_444.jpeg": {
     "label": "Piercing the Canopy",
@@ -522,6 +667,20 @@
     "label": "Sparkling Harmony",
     "alt": "Watching the stage light up like a thousand stars."
   },
+  "ted_46.jpeg": {
+    "label": "TED 46",
+    "alt": "Portfolio image TED 46",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 200,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_464.jpeg": {
     "category": "Concept",
     "label": "Graduation Hat",
@@ -533,6 +692,20 @@
       "aperture": "f/2.8",
       "shutterSpeed": "1/160",
       "iso": 100
+    }
+  },
+  "ted_484.jpeg": {
+    "label": "TED 484",
+    "alt": "Portfolio image TED 484",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 100,
+      "aperture": "f/2",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_490.jpeg": {
@@ -607,6 +780,20 @@
       "iso": 400,
       "camera": "Canon EOS RP",
       "lens": "35mm F1.4 DG HSM | Art 012"
+    }
+  },
+  "ted_54.jpeg": {
+    "label": "TED 54",
+    "alt": "Portfolio image TED 54",
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 100,
+      "aperture": "f/4.5",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_540.jpeg": {
@@ -793,6 +980,20 @@
       "height": 4160
     }
   },
+  "ted_640.jpeg": {
+    "label": "TED 640",
+    "alt": "Portfolio image TED 640",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 200,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_66.jpeg": {
     "label": "Quiet focus before the noise",
     "alt": "Holding the moment together in silence.",
@@ -842,6 +1043,20 @@
       "focalLengthMm": 105,
       "width": 2400,
       "height": 1600
+    }
+  },
+  "ted_69.jpeg": {
+    "label": "TED 69",
+    "alt": "Portfolio image TED 69",
+    "exif": {
+      "shutterSpeed": "1/100",
+      "iso": 100,
+      "aperture": "f/6.3",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 1600,
+      "height": 2400
     }
   },
   "ted_694.jpeg": {
@@ -894,10 +1109,60 @@
       "iso": 400
     }
   },
+  "ted_710.jpeg": {
+    "label": "TED 710",
+    "alt": "Portfolio image TED 710",
+    "exif": {
+      "width": 1605,
+      "height": 2400
+    }
+  },
+  "ted_711.jpeg": {
+    "label": "TED 711",
+    "alt": "Portfolio image TED 711",
+    "exif": {
+      "shutterSpeed": "1/40",
+      "iso": 800,
+      "aperture": "f/10",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
+  "ted_718.jpeg": {
+    "label": "TED 718",
+    "alt": "Portfolio image TED 718",
+    "exif": {
+      "shutterSpeed": "1/40",
+      "iso": 800,
+      "aperture": "f/16",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_723.jpeg": {
     "category": "Street",
     "label": "City Blooms",
     "alt": "Finding a bit of softness in the middle of the daily rush."
+  },
+  "ted_725.jpeg": {
+    "label": "TED 725",
+    "alt": "Portfolio image TED 725",
+    "exif": {
+      "shutterSpeed": "1/320",
+      "iso": 200,
+      "aperture": "f/2.8",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
   },
   "ted_726.jpeg": {
     "category": "Concept",
@@ -968,6 +1233,20 @@
       "camera": "Canon EOS 700D",
       "lens": "EF-S18-135mm f/3.5-5.6 IS STM",
       "focalLengthMm": 113,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  "ted_751.jpeg": {
+    "label": "TED 751",
+    "alt": "Portfolio image TED 751",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 100,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
       "width": 1600,
       "height": 2400
     }
@@ -1091,6 +1370,20 @@
       "height": 1600
     }
   },
+  "ted_844.jpeg": {
+    "label": "TED 844",
+    "alt": "Portfolio image TED 844",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 100,
+      "aperture": "f/1.4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_859.jpeg": {
     "label": "Unseen Pulse",
     "alt": "The quiet, nerve-wracking intensity in the dark that keeps the entire show breathing.",
@@ -1101,7 +1394,7 @@
       "iso": 4000,
       "shutterSpeed": "1/30",
       "camera": "Canon EOS 5D Mark III",
-      "lens":"Canon EF 24-105mm f/4L IS",
+      "lens": "Canon EF 24-105mm f/4L IS",
       "height": 1600
     }
   },
@@ -1165,6 +1458,14 @@
       "height": 2400
     }
   },
+  "ted_882.jpeg": {
+    "label": "TED 882",
+    "alt": "Portfolio image TED 882",
+    "exif": {
+      "width": 2400,
+      "height": 1600
+    }
+  },
   "ted_903.jpeg": {
     "label": "A Place I’ll Miss",
     "alt": "Didn’t think it would mean this much.",
@@ -1191,6 +1492,20 @@
       "aperture": "f/4",
       "shutterSpeed": "1/250",
       "iso": 400
+    }
+  },
+  "ted_94.jpeg": {
+    "label": "TED 94",
+    "alt": "Portfolio image TED 94",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 100,
+      "aperture": "f/2.2",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 85mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 85,
+      "width": 2400,
+      "height": 1600
     }
   },
   "ted_943.jpeg": {

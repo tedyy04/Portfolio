@@ -18,6 +18,7 @@ export default function Navbar() {
   ];
 
   const isCategorySectionActive = location.pathname.startsWith('/category/');
+  const isAlbumSectionActive = location.pathname === '/album' || location.pathname.startsWith('/album/');
 
   const navItemClass = (isActive: boolean) =>
     `liquid-hover liquid-focus inline-flex items-center align-middle leading-none font-body text-[10px] tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 hover:text-primary border-b pb-1 ${
@@ -44,6 +45,13 @@ export default function Navbar() {
             className={navItemClass(location.pathname === '/')}
           >
             WORK
+          </Link>
+
+          <Link
+            to="/album"
+            className={navItemClass(isAlbumSectionActive)}
+          >
+            ALBUM
           </Link>
 
           <div className="relative group">

@@ -114,6 +114,11 @@ async function readOverrides() {
     const raw = await fs.readFile(OVERRIDES_FILE, 'utf8');
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== 'object') return {};
+    // Reserve top-level `albums` for album-only overrides.
+    if (parsed.albums && typeof parsed.albums === 'object') {
+      const { albums: _albums, ...rest } = parsed;
+      return rest;
+    }
     return parsed;
   } catch {
     return {};
