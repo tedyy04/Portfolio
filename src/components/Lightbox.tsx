@@ -300,39 +300,44 @@ export default function Lightbox({
           <span className="material-symbols-outlined block leading-none text-3xl md:text-[34px] font-extralight">chevron_right</span>
         </button>
 
-        <div className="lightbox-scroll h-full overflow-y-auto px-[5%] md:px-[15%] py-8 md:py-10">
-          <div className="relative w-full min-h-full flex items-start justify-center group">
-            <div className="relative w-fit max-w-full mx-auto">
-              <img
-                ref={mainImageRef}
-                src={currentItem.src}
-                alt={currentItem.alt}
-                className="relative z-10 block mx-auto object-contain max-h-[70vh] max-w-full w-auto shadow-2xl transition-transform duration-700 ease-out group-hover:scale-[1.01]"
-              />
+        <div className="lightbox-scroll h-full overflow-y-auto px-[2%] md:px-[5%] py-8 md:py-10" onClick={onClose}>
+          <div className="relative w-full min-h-full flex items-center justify-center group">
+            <div 
+              className="relative w-fit max-w-[95vw] mx-auto bg-surface-bright/80 backdrop-blur-2xl rounded-2xl border border-white/50 shadow-xl flex flex-col justify-start p-5 md:p-6"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="w-full relative shrink-0 flex justify-center">
+                <img
+                  ref={mainImageRef}
+                  src={currentItem.src}
+                  alt={currentItem.alt}
+                  className="relative z-10 w-auto max-w-full max-h-[55vh] md:max-h-[calc(90vh-160px)] object-contain rounded-lg transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                />
+              </div>
 
               {showDetails && (
-                <div ref={captionRef} className="relative z-10 mt-6 md:mt-7 flex flex-col md:flex-row md:items-end justify-between gap-8 w-full min-w-0">
+                <div ref={captionRef} className="relative z-10 mt-6 flex-shrink-0 flex flex-col gap-4 w-full min-w-0">
                   <div className="min-w-0">
-                    <div className="flex items-center gap-3 min-w-0 mb-2">
-                      <h2 className="font-headline text-3xl md:text-4xl font-extrabold text-primary tracking-tight leading-none min-w-0">
+                    <div className="flex items-center gap-3 min-w-0 mb-1">
+                      <h2 className="lovable-h3 text-charcoal tracking-tight leading-none min-w-0">
                         {currentItem.label}
                       </h2>
                       {currentItem.tags?.[0] && (
-                        <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase flex-shrink-0">
+                        <span className="inline-flex items-center rounded-full px-2 py-0.5 bg-charcoal-4 border border-outline text-charcoal font-label text-[9px] tracking-[0.05em] uppercase flex-shrink-0">
                           {currentItem.tags[0]}
                         </span>
                       )}
                     </div>
-                    <p className="font-body text-[13px] text-on-surface-variant leading-relaxed break-words max-w-prose">
+                    <p className="font-body text-[13px] text-muted leading-relaxed break-words line-clamp-2">
                       {currentItem.alt}
                     </p>
                   </div>
 
-                  <div className="flex flex-col items-start md:items-end gap-2 min-w-0">
-                    <span className="font-label text-[10px] tracking-[0.15em] text-on-surface-variant uppercase">TECHNICAL SPECS</span>
-                    <div className="flex flex-col gap-1 min-w-0">
-                      <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{cameraLensLine}</span>
-                      <span className="font-label text-[11px] text-primary/90 tracking-wider break-words md:text-right">{exposureLine}</span>
+                  <div className="flex flex-col items-start gap-1 min-w-0">
+                    <span className="font-label text-[9px] tracking-[0.15em] text-muted uppercase">TECHNICAL SPECS</span>
+                    <div className="flex flex-col min-w-0">
+                      <span className="font-label text-[10px] text-charcoal tracking-wider break-words">{cameraLensLine}</span>
+                      <span className="font-label text-[10px] text-charcoal tracking-wider break-words">{exposureLine}</span>
                     </div>
                   </div>
                 </div>

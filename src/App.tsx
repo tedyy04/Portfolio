@@ -76,39 +76,11 @@ function NavbarWithRouteReset() {
 }
 
 function App() {
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-
-  useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    audio.volume = 0.25;
-
-    const tryPlay = async () => {
-      try {
-        await audio.play();
-      } catch {
-        // Autoplay can be blocked until a user gesture happens.
-        const onFirstGesture = () => {
-          audio.play().catch(() => {
-            // ignore
-          });
-        };
-
-        window.addEventListener('pointerdown', onFirstGesture, { once: true });
-        window.addEventListener('keydown', onFirstGesture, { once: true });
-      }
-    };
-
-    tryPlay();
-  }, []);
-
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
         <ScrollToTop />
         <NavbarWithRouteReset />
-        <audio ref={audioRef} src="/audio/background.mp3" loop preload="none" autoPlay />
         <AnimatedRoutes />
         <Footer />
       </div>

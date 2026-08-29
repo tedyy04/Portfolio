@@ -56,18 +56,49 @@ export default function Home() {
   }, [seed]);
 
   return (
-    <main className="pt-40 pb-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full">
-      <PortfolioGrid items={items} />
+    <main className="pt-32 pb-32 w-full">
+      {/* Hero Section */}
+      <section className="px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto pt-20 pb-32 flex flex-col items-start justify-center">
+        <Reveal>
+          <h1 className="lovable-h1 text-charcoal mb-6 max-w-4xl">
+            THE CINEMATIC NEGATIVE
+          </h1>
+          <p className="text-[18px] text-muted font-body max-w-2xl leading-[1.38] mb-10">
+            Capturing the quiet, focused intensity of the modern world. Every frame is a narrative preserved in obsidian layers. A private gallery for the discerning eye.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <a href="/album" className="lovable-button lovable-button-primary">
+              View Albums
+            </a>
+            <a href="/about" className="lovable-button lovable-button-ghost">
+              Read Profile
+            </a>
+          </div>
+        </Reveal>
+      </section>
 
-      <Reveal className="mt-40 mb-20 text-center max-w-3xl mx-auto">
-        <h2 className="font-headline text-5xl md:text-6xl font-extrabold tracking-tighter mb-8 text-primary">
-          THE CINEMATIC NEGATIVE
-        </h2>
-        <p className="font-body text-base leading-relaxed text-on-surface-variant">
-          Capturing the quiet, focused intensity of the modern world. Every frame is a narrative preserved in obsidian layers. A private gallery for the discerning eye.
-        </p>
-      </Reveal>
-
+      {/* Grid Section */}
+      <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto">
+        <div className="mb-12 flex justify-between items-end border-b border-outline pb-6">
+          <h2 className="lovable-h3 text-charcoal">Selected Works</h2>
+        </div>
+        <PortfolioGrid items={items} />
+      </section>
+      
+      {/* Footer / CTA */}
+      <section className="mt-40 mb-20 text-center max-w-3xl mx-auto px-6">
+        <Reveal>
+          <h2 className="lovable-h2 text-charcoal mb-6">
+            Let's create something together.
+          </h2>
+          <p className="font-body text-[18px] leading-[1.38] text-muted mb-10">
+            Based in Ho Chi Minh City, available for selected projects worldwide.
+          </p>
+          <a href="/contact" className="lovable-button lovable-button-primary">
+            Get in touch
+          </a>
+        </Reveal>
+      </section>
     </main>
   );
 }

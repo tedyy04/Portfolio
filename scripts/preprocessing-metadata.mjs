@@ -73,25 +73,21 @@ function pickLens(lensModel, lens) {
   return b || undefined;
 }
 
-function emptyExif() {
-  return {
-    shutterSpeed: null,
-    iso: null,
-    aperture: null,
-    camera: null,
-    lens: null,
-    focalLengthMm: null,
-    focalLength35Mm: null,
-    width: null,
-    height: null,
-    flashFired: null,
-  };
+function cleanExif(exif) {
+  if (!exif || typeof exif !== 'object') return {};
+  const out = {};
+  for (const [k, v] of Object.entries(exif)) {
+    if (v !== null && v !== undefined && v !== '') {
+      out[k] = v;
+    }
+  }
+  return out;
 }
 
 async function readExifSummary(filePath) {
   try {
     const data = await exifr.parse(filePath, { tiff: true, exif: true });
-    if (!data) return { found: false, exif: emptyExif() };
+    if (!data) return {};
 
     const exposureTime = data.ExposureTime ?? data.exposureTime;
     const fNumber = data.FNumber ?? data.fNumber;
@@ -112,22 +108,22 @@ async function readExifSummary(filePath) {
     const flash = data.Flash ?? data.flash;
     const flashFired = typeof flash === 'number' ? (flash & 1) === 1 : undefined;
 
-    const exif = {
-      shutterSpeed: formatShutterSpeed(exposureTime) ?? null,
-      iso: typeof iso === 'number' && Number.isFinite(iso) ? Math.round(iso) : null,
-      aperture: formatAperture(fNumber) ?? null,
-      camera: formatCamera(make, model) ?? null,
-      lens: pickLens(lensModel, lens) ?? null,
-      focalLengthMm: typeof focalLength === 'number' ? focalLength : null,
-      focalLength35Mm: typeof focalLength35 === 'number' ? focalLength35 : null,
-      width: typeof width === 'number' ? width : null,
-      height: typeof height === 'number' ? height : null,
-      flashFired: typeof flashFired === 'boolean' ? flashFired : null,
+    const raw = {
+      camera: formatCamera(make, model),
+      lens: pickLens(lensModel, lens),
+      aperture: formatAperture(fNumber),
+      shutterSpeed: formatShutterSpeed(exposureTime),
+      iso: typeof iso === 'number' && Number.isFinite(iso) ? Math.round(iso) : undefined,
+      focalLengthMm: typeof focalLength === 'number' ? focalLength : undefined,
+      focalLength35Mm: typeof focalLength35 === 'number' ? focalLength35 : undefined,
+      width: typeof width === 'number' ? width : undefined,
+      height: typeof height === 'number' ? height : undefined,
+      flashFired: typeof flashFired === 'boolean' ? flashFired : undefined,
     };
 
-    return { found: true, exif };
+    return cleanExif(raw);
   } catch {
-    return { found: false, exif: emptyExif() };
+    return {};
   }
 }
 
@@ -147,7 +143,7 @@ function normalizeAlt(value, fallbackLabel) {
 }
 
 async function main() {
-  const metadata = await readJson(METADATA_FILE);
+  const existingMetadata = await readJson(METADATA_FILE);
   const overrides = await readJson(OVERRIDES_FILE);
 
   let files = [];
@@ -159,59 +155,65 @@ async function main() {
     return;
   }
 
-  const now = new Date().toISOString();
-  const present = new Set(files);
+  if (files.length === 0) {
+    console.log('No images found in preprocessing/. Nothing to extract.');
+    return;
+  }
 
   /** @type {Record<string, any>} */
-  const next = isObject(metadata) ? { ...metadata } : {};
-
-  // Mark existing entries that are no longer present.
-  for (const [fileName, entry] of Object.entries(next)) {
-    if (!isObject(entry)) continue;
-    entry.present = present.has(fileName);
-  }
+  const next = {};
 
   for (const fileName of files) {
     const absPath = path.join(PREPROCESSING_DIR, fileName);
 
-    const existing = isObject(next[fileName]) ? next[fileName] : {};
-    const draft = isObject(existing.draft) ? existing.draft : {};
-    const notes = typeof existing.notes === 'string' ? existing.notes : '';
+    const prev = isObject(existingMetadata[fileName]) ? existingMetadata[fileName] : {};
+    const override = isObject(overrides[fileName]) ? overrides[fileName] : {};
 
     const labelFallback = fileToLabel(fileName);
-    const exifResult = await readExifSummary(absPath);
-    const exifExtracted = exifResult.exif;
-    const overrideSnapshot = isObject(overrides[fileName]) ? overrides[fileName] : null;
+    const extractedExif = await readExifSummary(absPath);
+
+    // Merge EXIF: extracted < override < user edits in metadata file
+    const mergedExif = cleanExif({
+      ...extractedExif,
+      ...(isObject(override.exif) ? override.exif : {}),
+      ...(isObject(prev.exif) ? prev.exif : {}),
+    });
+
+    const category = typeof prev.category === 'string' && prev.category.trim()
+      ? prev.category.trim()
+      : (typeof override.category === 'string' ? override.category.trim() : '');
+
+    const label = typeof prev.label === 'string' && prev.label.trim()
+      ? prev.label.trim()
+      : (typeof override.label === 'string' && override.label.trim() ? override.label.trim() : labelFallback);
+
+    const alt = typeof prev.alt === 'string' && prev.alt.trim()
+      ? prev.alt.trim()
+      : (typeof override.alt === 'string' && override.alt.trim() ? override.alt.trim() : normalizeAlt('', label));
+
+    const tags = prev.tags !== undefined
+      ? prev.tags
+      : (override.tags !== undefined ? override.tags : '');
+
+    const hideOnHome = prev.hideOnHome !== undefined
+      ? Boolean(prev.hideOnHome)
+      : Boolean(override.hideOnHome);
 
     next[fileName] = {
-      present: true,
-      updatedAt: now,
-      suggested: {
-        label: labelFallback,
-        alt: normalizeAlt('', labelFallback),
-        exif: exifExtracted,
-      },
-      overrideSnapshot,
-      exifExtracted,
-      exifFound: exifResult.found,
-      draft: {
-        // user-editable section (only this should be edited)
-        label: typeof draft.label === 'string' ? draft.label : '',
-        alt: typeof draft.alt === 'string' ? draft.alt : '',
-        category: typeof draft.category === 'string' ? draft.category : '',
-        tags: Array.isArray(draft.tags) || typeof draft.tags === 'string' ? draft.tags : '',
-        hideOnHome: typeof draft.hideOnHome === 'boolean' ? draft.hideOnHome : undefined,
-        exif: isObject(draft.exif) ? draft.exif : {},
-      },
-      notes,
+      category,
+      label,
+      alt,
+      tags,
+      hideOnHome,
+      exif: mergedExif,
     };
   }
 
-  // Keep file stable: sort keys.
+  // Keep keys sorted by file name
   const sorted = Object.fromEntries(Object.entries(next).sort(([a], [b]) => a.localeCompare(b)));
   await writeJson(METADATA_FILE, sorted);
 
-  console.log(`Wrote ${path.relative(process.cwd(), METADATA_FILE)} for ${files.length} preprocessing images.`);
+  console.log(`Generated metadata for ${files.length} image(s) in ${path.relative(process.cwd(), METADATA_FILE)}.`);
 }
 
 await main();

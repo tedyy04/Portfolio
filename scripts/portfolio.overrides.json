@@ -1,6 +1,22 @@
 {
   "albums": {
-    "our20s/ted_443.jpeg": {"isCover": true}
+    "our20s/ted_443.jpeg": {
+      "isCover": true
+    }
+  },
+  "ted_101.jpeg": {
+    "label": "Girls of Summer",
+    "alt": "Girls sharing a moment of shared joy with their surfboard at the beach.",
+    "exif": {
+      "shutterSpeed": "1/30",
+      "iso": 400,
+      "aperture": "f/3.5",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 72,
+      "width": 1800,
+      "height": 2400
+    }
   },
   "ted_103.jpeg": {
     "category": "Event",
@@ -197,6 +213,20 @@
     "tags": "Coffee",
     "alt": "Enjoying the calm view and good coffee."
   },
+  "ted_188.jpeg": {
+    "label": "Letting Our Dreams Soar",
+    "alt": "Vibrant kites dancing gracefully against a clear blue sky.",
+    "exif": {
+      "shutterSpeed": "1/2000",
+      "iso": 200,
+      "aperture": "f/6.3",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 40,
+      "width": 2400,
+      "height": 1613
+    }
+  },
   "ted_19.jpeg": {
     "category": "Scene",
     "label": "Silent Shore",
@@ -385,6 +415,22 @@
       "flashFired": false
     }
   },
+  "ted_283.jpeg": {
+    "label": "City Lights",
+    "alt": "A captivating panoramic view of a bustling city illuminated by thousands of lights at night.",
+    "tags": "City",
+    "exif": {
+      "shutterSpeed": "1/25",
+      "iso": 1250,
+      "aperture": "f/1.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back camera 6.765mm f/1.78",
+      "focalLengthMm": 6.764999865652793,
+      "focalLength35Mm": 24,
+      "width": 1349,
+      "height": 2400
+    }
+  },
   "ted_286.jpeg": {
     "label": "Through My Lens",
     "alt": "Some memories only exist because I chose to keep them.",
@@ -411,6 +457,21 @@
       "focalLengthMm": 85,
       "width": 2400,
       "height": 1600
+    }
+  },
+  "ted_293.jpeg": {
+    "label": "Peak Hikers",
+    "alt": "A group of friends sharing a moment of triumph on a trip to Ninh Thuan.",
+    "tags": "SOC2026",
+    "exif": {
+      "shutterSpeed": "1/1000",
+      "iso": 400,
+      "aperture": "f/6.3",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 72,
+      "width": 2400,
+      "height": 1613
     }
   },
   "ted_31.jpeg": {
@@ -567,6 +628,20 @@
     "label": "Through the Glass",
     "alt": "Found this frame while waiting for my turn to the train."
   },
+  "ted_416.jpeg": {
+    "label": "Sunset Chill",
+    "alt": "Sunset at Creative Park",
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 200,
+      "aperture": "f/9",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 40,
+      "width": 2400,
+      "height": 1613
+    }
+  },
   "ted_420.jpeg": {
     "category": "Other",
     "hideOnHome": true
@@ -619,7 +694,6 @@
       "width": 2400,
       "height": 1600
     }
-    
   },
   "ted_444.jpeg": {
     "label": "Piercing the Canopy",
@@ -914,6 +988,20 @@
       "lens": "EF70-200mm f/2.8L IS II USM"
     }
   },
+  "ted_612.jpeg": {
+    "label": "Reflected Realities",
+    "alt": "A Boy's Inner World",
+    "exif": {
+      "shutterSpeed": "1/60",
+      "iso": 200,
+      "aperture": "f/5.6",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 72,
+      "width": 2400,
+      "height": 1613
+    }
+  },
   "ted_615.jpeg": {
     "category": "Scene",
     "label": "Silent Shore",
@@ -1009,6 +1097,21 @@
       "height": 1600
     }
   },
+  "ted_666.jpeg": {
+    "label": "La Voix des Étoiles",
+    "alt": "A singer's capturing the magic of music and its power to inspire.",
+    "exif": {
+      "shutterSpeed": "1/120",
+      "iso": 1250,
+      "aperture": "f/1.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back camera 6.765mm f/1.78",
+      "focalLengthMm": 120,
+      "focalLength35Mm": 24,
+      "width": 1350,
+      "height": 2400
+    }
+  },
   "ted_672.jpeg": {
     "label": "Quiet Companions",
     "alt": "Two generations just watching the afternoon slip by.",
@@ -1029,6 +1132,20 @@
     "label": "Light on the Shelf",
     "alt": "Just a fragment of home.",
     "tags": "Funiture"
+  },
+  "ted_686.jpeg": {
+    "label": "Sanctuaire de la Solitude",
+    "alt": "The quiet joy of solitude and the deep connection with oneself and nature, a sanctuary of the mind and heart.",
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 400,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 1600,
+      "height": 2400
+    }
   },
   "ted_687.jpeg": {
     "label": "Bitexco at Dusk",
@@ -1218,7 +1335,7 @@
       "camera": "Điện thoại KUyên",
       "lens": "iPhone 12 front camera 23mm f/2.2",
       "shutterSpeed": "1/30",
-      "aperture": "f/2.8",
+      "aperture": "f/2.2",
       "iso": 1000
     }
   },
@@ -1265,6 +1382,20 @@
       "lens": "85mm F1.4 DG HSM | Art 016"
     }
   },
+  "ted_76.jpeg": {
+    "label": "Ascending to New Heights",
+    "alt": "A breathtaking view of a winding staircase leading up to a mountain peak.",
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 400,
+      "aperture": "f/6.3",
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 1800,
+      "height": 2400
+    }
+  },
   "ted_761.jpeg": {
     "label": "We Stand Here",
     "alt": "TED10day",
@@ -1308,6 +1439,20 @@
       "focalLengthMm": 50,
       "width": 2400,
       "height": 1600
+    }
+  },
+  "ted_808.jpeg": {
+    "label": "Making Memories",
+    "alt": "Trip to Ninh Thuan",
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 400,
+      "aperture": "f/5.6",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1613
     }
   },
   "ted_809.jpeg": {
@@ -1428,6 +1573,20 @@
       "height": 3060
     }
   },
+  "ted_868.jpeg": {
+    "label": "Call of the Sea",
+    "alt": "Out off the grid",
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 400,
+      "aperture": "f/9",
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 1416,
+      "height": 2400
+    }
+  },
   "ted_877.jpeg": {
     "label": "Soulful Soles",
     "alt": "The miles, the hours, the exhaustion. These boots carried my weight and my heart today. Proud.",
@@ -1464,6 +1623,19 @@
     "exif": {
       "width": 2400,
       "height": 1600
+    }
+  },
+  "ted_891.jpeg": {
+    "label": "Gaze of Youth",
+    "alt": "Pointing at boundless horizons and unwritten futures.",
+    "exif": {
+      "shutterSpeed": "1/2000",
+      "iso": 400,
+      "aperture": "f/6.3",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "width": 2400,
+      "height": 1613
     }
   },
   "ted_903.jpeg": {
@@ -1536,6 +1708,19 @@
     "label": "Window Light & Bản",
     "tags": "Coffee",
     "alt": "Another aspect"
+  },
+  "ted_953.jpeg": {
+    "label": "Suspended Dream",
+    "alt": "A fleeting act of weightless grace beneath the spotlight.",
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 100,
+      "aperture": "f/1.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back camera 6.765mm f/1.78",
+      "width": 1350,
+      "height": 2400
+    }
   },
   "ted_959.jpeg": {
     "tags": "",

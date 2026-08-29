@@ -8,77 +8,48 @@ export default {
   theme: {
     extend: {
       colors: {
-        "background": "#070814",
-        "on-background": "#e9ecff",
+        // Lovable warm cream background
+        "background": "#f7f4ed",
+        "on-background": "#1c1c1c",
 
-        "surface": "#0a0b18",
-        "surface-dim": "#070814",
-        "surface-bright": "#14183a",
+        "surface": "#f7f4ed",
+        "surface-dim": "#eceae4",
+        "surface-bright": "#ffffff",
 
-        "surface-container-lowest": "#05060f",
-        "surface-container-low": "#0b0f22",
-        "surface-container": "#0f1430",
-        "surface-container-high": "#141a3a",
-        "surface-container-highest": "#1a2146",
+        // Lovable opacity-based neutral scale derivations (simulated with hex where opacity is tricky, or just use css variables)
+        // Here we just define the base ones.
+        "charcoal": "#1c1c1c",
+        "charcoal-83": "rgba(28,28,28,0.83)",
+        "charcoal-82": "rgba(28,28,28,0.82)",
+        "charcoal-40": "rgba(28,28,28,0.40)",
+        "charcoal-4": "rgba(28,28,28,0.04)",
+        "charcoal-3": "rgba(28,28,28,0.03)",
+        "muted": "#5f5f5d",
+        "off-white": "#fcfbf8",
 
-        "surface-variant": "#182043",
-        "outline-variant": "#2b3153",
-         "outline": "#9aa5d4",
+        "primary": "#1c1c1c",
+        "on-primary": "#fcfbf8",
+        
+        "secondary": "rgba(28,28,28,0.04)",
+        "on-secondary": "#1c1c1c",
 
-        "primary": "#f4f6ff",
-        "on-primary": "#070814",
-        "primary-container": "#b9c6ff",
-        "on-primary-container": "#070814",
-
-        "secondary": "#7df9ff",
-        "on-secondary": "#070814",
-        "secondary-container": "#132b3a",
-        "on-secondary-container": "#d6fbff",
-
-        "tertiary": "#b9a2ff",
-        "on-tertiary": "#070814",
-        "tertiary-container": "#2a1f4f",
-        "on-tertiary-container": "#efe9ff",
-
-        "surface-tint": "#7ea6ff",
-
-        "on-surface": "#e9ecff",
-         "on-surface-variant": "#c6cdf2",
-
-        "inverse-surface": "#e9ecff",
-        "inverse-on-surface": "#0a0b18",
-        "inverse-primary": "#2a55ff",
-
-        "primary-fixed": "#7ea6ff",
-        "primary-fixed-dim": "#5e7dff",
-        "on-primary-fixed": "#070814",
-        "on-primary-fixed-variant": "#0a0b18",
-
-        "secondary-fixed": "#7df9ff",
-        "secondary-fixed-dim": "#42d9ff",
-        "on-secondary-fixed": "#070814",
-        "on-secondary-fixed-variant": "#0a0b18",
-
-        "tertiary-fixed": "#b9a2ff",
-        "tertiary-fixed-dim": "#9a7dff",
-        "on-tertiary-fixed": "#070814",
-        "on-tertiary-fixed-variant": "#0a0b18",
-
-        "error": "#ffb4ab",
-        "error-container": "#93000a",
-        "on-error": "#690005",
-        "on-error-container": "#ffdad6"
+        "outline": "#eceae4",
+        "outline-variant": "rgba(28,28,28,0.4)",
+        "focus-ring": "rgba(59,130,246,0.5)",
       },
       fontFamily: {
-        "headline": ["Manrope", "sans-serif"],
-        "body": ["Inter", "sans-serif"],
-        "label": ["Inter", "sans-serif"]
+        // Lovable uses Camera Plain Variable, fallback to system UI sans
+        "headline": ["Camera Plain Variable", "ui-sans-serif", "system-ui", "sans-serif"],
+        "body": ["Camera Plain Variable", "ui-sans-serif", "system-ui", "sans-serif"],
+        "label": ["Camera Plain Variable", "ui-sans-serif", "system-ui", "sans-serif"]
       },
       borderRadius: {
-        "DEFAULT": "16px",
-        "lg": "20px",
-        "xl": "28px",
-        "full": "9999px"
+        "DEFAULT": "6px",
+        "sm": "4px",
+        "md": "8px",
+        "lg": "12px",
+        "xl": "16px",
+        "pill": "9999px"
       },
     },
   },

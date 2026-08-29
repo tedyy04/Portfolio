@@ -31,6 +31,26 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   {
     "id": 1,
+    "src": "/images/event/ted_101.jpeg",
+    "fileName": "ted_101.jpeg",
+    "label": "Girls of Summer",
+    "alt": "Girls sharing a moment of shared joy with their surfboard at the beach.",
+    "category": "Event",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/30",
+      "iso": 400,
+      "aperture": "f/3.5",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 72,
+      "width": 1800,
+      "height": 2400
+    }
+  },
+  {
+    "id": 2,
     "src": "/images/event/ted_103.jpeg",
     "fileName": "ted_103.jpeg",
     "label": "Focus",
@@ -50,7 +70,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 2,
+    "id": 3,
     "src": "/images/scene/ted_106.jpeg",
     "fileName": "ted_106.jpeg",
     "label": "Midnight Campus",
@@ -72,7 +92,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 3,
+    "id": 4,
     "src": "/images/event/ted_11.jpeg",
     "fileName": "ted_11.jpeg",
     "label": "Deep in Thought",
@@ -92,7 +112,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 4,
+    "id": 5,
     "src": "/images/scene/ted_114.jpeg",
     "fileName": "ted_114.jpeg",
     "label": "City on Fire",
@@ -112,7 +132,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 5,
+    "id": 6,
     "src": "/images/scene/ted_127.jpeg",
     "fileName": "ted_127.jpeg",
     "label": "Chasing Colors",
@@ -132,7 +152,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 6,
+    "id": 7,
     "src": "/images/scene/ted_129.jpeg",
     "fileName": "ted_129.jpeg",
     "label": "Emerald Oasis",
@@ -153,7 +173,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 7,
+    "id": 8,
     "src": "/images/event/ted_133.jpeg",
     "fileName": "ted_133.jpeg",
     "label": "Quiet Connection",
@@ -173,7 +193,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 8,
+    "id": 9,
     "src": "/images/scene/ted_14.jpeg",
     "fileName": "ted_14.jpeg",
     "label": "Afterglow",
@@ -194,7 +214,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 9,
+    "id": 10,
     "src": "/images/concept/ted_142.jpeg",
     "fileName": "ted_142.jpeg",
     "label": "Golden Girls",
@@ -215,7 +235,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 10,
+    "id": 11,
     "src": "/images/scene/ted_149.jpeg",
     "fileName": "ted_149.jpeg",
     "label": "Midnight Traffic",
@@ -238,7 +258,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 11,
+    "id": 12,
     "src": "/images/street/ted_16.jpeg",
     "fileName": "ted_16.jpeg",
     "label": "Old Souls",
@@ -258,7 +278,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 12,
+    "id": 13,
     "src": "/images/concept/ted_178.jpeg",
     "fileName": "ted_178.jpeg",
     "label": "Chapter Closed",
@@ -279,7 +299,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 13,
+    "id": 14,
     "src": "/images/scene/ted_184.jpeg",
     "fileName": "ted_184.jpeg",
     "label": "Window Light & Bản",
@@ -301,7 +321,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 14,
+    "id": 15,
+    "src": "/images/scene/ted_188.jpeg",
+    "fileName": "ted_188.jpeg",
+    "label": "Letting Our Dreams Soar",
+    "alt": "Vibrant kites dancing gracefully against a clear blue sky.",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/2000",
+      "iso": 200,
+      "aperture": "f/6.3",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 40,
+      "width": 2400,
+      "height": 1613
+    }
+  },
+  {
+    "id": 16,
     "src": "/images/scene/ted_19.jpeg",
     "fileName": "ted_19.jpeg",
     "label": "Silent Shore",
@@ -322,7 +362,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 15,
+    "id": 17,
     "src": "/images/scene/ted_219.jpeg",
     "fileName": "ted_219.jpeg",
     "label": "Rest Station",
@@ -344,7 +384,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 16,
+    "id": 18,
     "src": "/images/scene/ted_22.jpeg",
     "fileName": "ted_22.jpeg",
     "label": "A Timeless Vow",
@@ -366,7 +406,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 17,
+    "id": 19,
     "src": "/images/event/ted_220.jpeg",
     "fileName": "ted_220.jpeg",
     "label": "Signed & Sealed",
@@ -386,7 +426,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 18,
+    "id": 20,
     "src": "/images/concept/ted_230.jpeg",
     "fileName": "ted_230.jpeg",
     "label": "Thành An",
@@ -407,7 +447,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 19,
+    "id": 21,
     "src": "/images/scene/ted_242.jpeg",
     "fileName": "ted_242.jpeg",
     "label": "Clouds Below",
@@ -429,7 +469,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 20,
+    "id": 22,
     "src": "/images/street/ted_247.jpeg",
     "fileName": "ted_247.jpeg",
     "label": "Saigon After Dark",
@@ -451,7 +491,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 21,
+    "id": 23,
     "src": "/images/street/ted_251.jpeg",
     "fileName": "ted_251.jpeg",
     "label": "Station Life",
@@ -475,7 +515,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 22,
+    "id": 24,
     "src": "/images/scene/ted_253.jpeg",
     "fileName": "ted_253.jpeg",
     "label": "The Empty Chair",
@@ -495,7 +535,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 23,
+    "id": 25,
     "src": "/images/street/ted_272.jpeg",
     "fileName": "ted_272.jpeg",
     "label": "Together we meet",
@@ -514,7 +554,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 24,
+    "id": 26,
     "src": "/images/concept/ted_277.jpeg",
     "fileName": "ted_277.jpeg",
     "label": "In Between Moments",
@@ -534,7 +574,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 25,
+    "id": 27,
     "src": "/images/event/ted_282.jpeg",
     "fileName": "ted_282.jpeg",
     "label": "Some moments speak in silhouette",
@@ -556,7 +596,30 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 26,
+    "id": 28,
+    "src": "/images/scene/ted_283.jpeg",
+    "fileName": "ted_283.jpeg",
+    "label": "City Lights",
+    "alt": "A captivating panoramic view of a bustling city illuminated by thousands of lights at night.",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [
+      "City"
+    ],
+    "exif": {
+      "shutterSpeed": "1/25",
+      "iso": 1250,
+      "aperture": "f/1.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back camera 6.765mm f/1.78",
+      "focalLengthMm": 6.764999865652793,
+      "focalLength35Mm": 24,
+      "width": 1349,
+      "height": 2400
+    }
+  },
+  {
+    "id": 29,
     "src": "/images/street/ted_286.jpeg",
     "fileName": "ted_286.jpeg",
     "label": "Through My Lens",
@@ -575,7 +638,29 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 27,
+    "id": 30,
+    "src": "/images/scene/ted_293.jpeg",
+    "fileName": "ted_293.jpeg",
+    "label": "Peak Hikers",
+    "alt": "A group of friends sharing a moment of triumph on a trip to Ninh Thuan.",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [
+      "SOC2026"
+    ],
+    "exif": {
+      "shutterSpeed": "1/1000",
+      "iso": 400,
+      "aperture": "f/6.3",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 72,
+      "width": 2400,
+      "height": 1613
+    }
+  },
+  {
+    "id": 31,
     "src": "/images/concept/ted_31.jpeg",
     "fileName": "ted_31.jpeg",
     "label": "A Quiet Chapter",
@@ -594,7 +679,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 28,
+    "id": 32,
     "src": "/images/event/ted_316.jpeg",
     "fileName": "ted_316.jpeg",
     "label": "That's a Wrap!",
@@ -615,7 +700,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 29,
+    "id": 33,
     "src": "/images/scene/ted_321.jpeg",
     "fileName": "ted_321.jpeg",
     "label": "Workspace Flow",
@@ -637,7 +722,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 30,
+    "id": 34,
     "src": "/images/scene/ted_352.jpeg",
     "fileName": "ted_352.jpeg",
     "label": "Golden Hour People at Creative Park",
@@ -659,7 +744,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 31,
+    "id": 35,
     "src": "/images/scene/ted_354.jpeg",
     "fileName": "ted_354.jpeg",
     "label": "Wide Open",
@@ -680,7 +765,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 32,
+    "id": 36,
     "src": "/images/event/ted_398.jpeg",
     "fileName": "ted_398.jpeg",
     "label": "Grace in the Dark",
@@ -700,7 +785,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 33,
+    "id": 37,
     "src": "/images/scene/ted_401.jpeg",
     "fileName": "ted_401.jpeg",
     "label": "Quiet Reflections",
@@ -722,7 +807,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 34,
+    "id": 38,
     "src": "/images/event/ted_41.jpeg",
     "fileName": "ted_41.jpeg",
     "label": "Pure Joy",
@@ -743,7 +828,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 35,
+    "id": 39,
     "src": "/images/street/ted_412.jpeg",
     "fileName": "ted_412.jpeg",
     "label": "Through the Glass",
@@ -765,7 +850,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 36,
+    "id": 40,
+    "src": "/images/scene/ted_416.jpeg",
+    "fileName": "ted_416.jpeg",
+    "label": "Sunset Chill",
+    "alt": "Sunset at Creative Park",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 200,
+      "aperture": "f/9",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 40,
+      "width": 2400,
+      "height": 1613
+    }
+  },
+  {
+    "id": 41,
     "src": "/images/scene/ted_426.jpeg",
     "fileName": "ted_426.jpeg",
     "label": "Sundown Drifter",
@@ -784,7 +889,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 37,
+    "id": 42,
     "src": "/images/concept/ted_440.jpeg",
     "fileName": "ted_440.jpeg",
     "label": "Woven",
@@ -805,7 +910,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 38,
+    "id": 43,
     "src": "/images/concept/ted_442.jpeg",
     "fileName": "ted_442.jpeg",
     "label": "Milestones",
@@ -824,7 +929,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 39,
+    "id": 44,
     "src": "/images/street/ted_444.jpeg",
     "fileName": "ted_444.jpeg",
     "label": "Piercing the Canopy",
@@ -844,7 +949,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 40,
+    "id": 45,
     "src": "/images/street/ted_446.jpeg",
     "fileName": "ted_446.jpeg",
     "label": "Passing Through",
@@ -866,7 +971,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 41,
+    "id": 46,
     "src": "/images/concept/ted_450.jpeg",
     "fileName": "ted_450.jpeg",
     "label": "Sunny Smiles",
@@ -888,7 +993,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 42,
+    "id": 47,
     "src": "/images/concept/ted_451.jpeg",
     "fileName": "ted_451.jpeg",
     "label": "A Page of Peace",
@@ -908,7 +1013,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 43,
+    "id": 48,
     "src": "/images/event/ted_454.jpeg",
     "fileName": "ted_454.jpeg",
     "label": "Sparkling Harmony",
@@ -928,7 +1033,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 44,
+    "id": 49,
     "src": "/images/concept/ted_464.jpeg",
     "fileName": "ted_464.jpeg",
     "label": "Graduation Hat",
@@ -947,7 +1052,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 45,
+    "id": 50,
     "src": "/images/event/ted_490.jpeg",
     "fileName": "ted_490.jpeg",
     "label": "Strangers",
@@ -967,7 +1072,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 46,
+    "id": 51,
     "src": "/images/event/ted_514.jpeg",
     "fileName": "ted_514.jpeg",
     "label": "Echoes of Us",
@@ -989,7 +1094,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 47,
+    "id": 52,
     "src": "/images/event/ted_528.jpeg",
     "fileName": "ted_528.jpeg",
     "label": "Lights in the Dark",
@@ -1009,7 +1114,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 48,
+    "id": 53,
     "src": "/images/concept/ted_531.jpeg",
     "fileName": "ted_531.jpeg",
     "label": "We Grew Here",
@@ -1029,7 +1134,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 49,
+    "id": 54,
     "src": "/images/concept/ted_533.jpeg",
     "fileName": "ted_533.jpeg",
     "label": "This Was Us",
@@ -1048,7 +1153,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 50,
+    "id": 55,
     "src": "/images/event/ted_540.jpeg",
     "fileName": "ted_540.jpeg",
     "label": "Starlight Wings",
@@ -1068,7 +1173,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 51,
+    "id": 56,
     "src": "/images/event/ted_553.jpeg",
     "fileName": "ted_553.jpeg",
     "label": "Illuminated Milestones",
@@ -1089,7 +1194,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 52,
+    "id": 57,
     "src": "/images/scene/ted_567.jpeg",
     "fileName": "ted_567.jpeg",
     "label": "Corner Light",
@@ -1111,7 +1216,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 53,
+    "id": 58,
     "src": "/images/event/ted_571.jpeg",
     "fileName": "ted_571.jpeg",
     "label": "Inner Circle",
@@ -1131,7 +1236,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 54,
+    "id": 59,
     "src": "/images/scene/ted_574.jpeg",
     "fileName": "ted_574.jpeg",
     "label": "Art of Surrender",
@@ -1153,7 +1258,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 55,
+    "id": 60,
     "src": "/images/concept/ted_576.jpeg",
     "fileName": "ted_576.jpeg",
     "label": "Where the Light Stayed",
@@ -1174,7 +1279,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 56,
+    "id": 61,
     "src": "/images/concept/ted_580.jpeg",
     "fileName": "ted_580.jpeg",
     "label": "Park walk",
@@ -1193,7 +1298,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 57,
+    "id": 62,
     "src": "/images/event/ted_584.jpeg",
     "fileName": "ted_584.jpeg",
     "label": "Paper & Sweat",
@@ -1215,7 +1320,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 58,
+    "id": 63,
     "src": "/images/event/ted_61.jpeg",
     "fileName": "ted_61.jpeg",
     "label": "Red Spotlight",
@@ -1235,7 +1340,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 59,
+    "id": 64,
+    "src": "/images/street/ted_612.jpeg",
+    "fileName": "ted_612.jpeg",
+    "label": "Reflected Realities",
+    "alt": "A Boy's Inner World",
+    "category": "Street",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/60",
+      "iso": 200,
+      "aperture": "f/5.6",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 72,
+      "width": 2400,
+      "height": 1613
+    }
+  },
+  {
+    "id": 65,
     "src": "/images/scene/ted_615.jpeg",
     "fileName": "ted_615.jpeg",
     "label": "Silent Shore",
@@ -1256,7 +1381,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 60,
+    "id": 66,
     "src": "/images/event/ted_622.jpeg",
     "fileName": "ted_622.jpeg",
     "label": "Crimson Wings",
@@ -1276,7 +1401,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 61,
+    "id": 67,
     "src": "/images/scene/ted_624.jpeg",
     "fileName": "ted_624.jpeg",
     "label": "Running with the Wind",
@@ -1296,7 +1421,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 62,
+    "id": 68,
     "src": "/images/scene/ted_625.jpeg",
     "fileName": "ted_625.jpeg",
     "label": "First Light",
@@ -1318,7 +1443,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 63,
+    "id": 69,
     "src": "/images/scene/ted_635.jpeg",
     "fileName": "ted_635.jpeg",
     "label": "Soft Eyes",
@@ -1340,7 +1465,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 64,
+    "id": 70,
     "src": "/images/event/ted_66.jpeg",
     "fileName": "ted_66.jpeg",
     "label": "Quiet focus before the noise",
@@ -1362,7 +1487,28 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 65,
+    "id": 71,
+    "src": "/images/event/ted_666.jpeg",
+    "fileName": "ted_666.jpeg",
+    "label": "La Voix des Étoiles",
+    "alt": "A singer's capturing the magic of music and its power to inspire.",
+    "category": "Event",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/120",
+      "iso": 1250,
+      "aperture": "f/1.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back camera 6.765mm f/1.78",
+      "focalLengthMm": 120,
+      "focalLength35Mm": 24,
+      "width": 1350,
+      "height": 2400
+    }
+  },
+  {
+    "id": 72,
     "src": "/images/scene/ted_672.jpeg",
     "fileName": "ted_672.jpeg",
     "label": "Quiet Companions",
@@ -1384,7 +1530,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 66,
+    "id": 73,
     "src": "/images/scene/ted_674.jpeg",
     "fileName": "ted_674.jpeg",
     "label": "Light on the Shelf",
@@ -1406,7 +1552,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 67,
+    "id": 74,
+    "src": "/images/scene/ted_686.jpeg",
+    "fileName": "ted_686.jpeg",
+    "label": "Sanctuaire de la Solitude",
+    "alt": "The quiet joy of solitude and the deep connection with oneself and nature, a sanctuary of the mind and heart.",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 400,
+      "aperture": "f/4",
+      "camera": "Canon EOS RP",
+      "lens": "Sigma 35mm F1.4 DG HSM | A (Canon EF)",
+      "focalLengthMm": 35,
+      "width": 1600,
+      "height": 2400
+    }
+  },
+  {
+    "id": 75,
     "src": "/images/scene/ted_687.jpeg",
     "fileName": "ted_687.jpeg",
     "label": "Bitexco at Dusk",
@@ -1428,7 +1594,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 68,
+    "id": 76,
     "src": "/images/scene/ted_694.jpeg",
     "fileName": "ted_694.jpeg",
     "label": "On the Way Up",
@@ -1450,7 +1616,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 69,
+    "id": 77,
     "src": "/images/concept/ted_698.jpeg",
     "fileName": "ted_698.jpeg",
     "label": "Main Character Energy",
@@ -1472,7 +1638,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 70,
+    "id": 78,
     "src": "/images/concept/ted_700.jpeg",
     "fileName": "ted_700.jpeg",
     "label": "Walking into the path",
@@ -1494,7 +1660,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 71,
+    "id": 79,
     "src": "/images/concept/ted_701.jpeg",
     "fileName": "ted_701.jpeg",
     "label": "Into the Light",
@@ -1515,7 +1681,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 72,
+    "id": 80,
     "src": "/images/street/ted_723.jpeg",
     "fileName": "ted_723.jpeg",
     "label": "City Blooms",
@@ -1535,7 +1701,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 73,
+    "id": 81,
     "src": "/images/concept/ted_726.jpeg",
     "fileName": "ted_726.jpeg",
     "label": "Thành An",
@@ -1556,7 +1722,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 74,
+    "id": 82,
     "src": "/images/concept/ted_735.jpeg",
     "fileName": "ted_735.jpeg",
     "label": "Love, Loud and Unfiltered",
@@ -1578,7 +1744,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 75,
+    "id": 83,
     "src": "/images/street/ted_737.jpeg",
     "fileName": "ted_737.jpeg",
     "label": "Dog",
@@ -1602,7 +1768,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 76,
+    "id": 84,
     "src": "/images/scene/ted_739.jpeg",
     "fileName": "ted_739.jpeg",
     "label": "Afternoon Stillness",
@@ -1618,7 +1784,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 77,
+    "id": 85,
     "src": "/images/event/ted_741.jpeg",
     "fileName": "ted_741.jpeg",
     "label": "After Hours",
@@ -1631,7 +1797,7 @@ export const portfolioItems: PortfolioItem[] = [
     "exif": {
       "shutterSpeed": "1/30",
       "iso": 1000,
-      "aperture": "f/2.8",
+      "aperture": "f/2.2",
       "camera": "Điện thoại KUyên",
       "lens": "iPhone 12 front camera 23mm f/2.2",
       "width": 2048,
@@ -1639,7 +1805,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 78,
+    "id": 86,
     "src": "/images/event/ted_75.jpeg",
     "fileName": "ted_75.jpeg",
     "label": "In the Spotlight",
@@ -1659,7 +1825,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 79,
+    "id": 87,
     "src": "/images/concept/ted_754.jpeg",
     "fileName": "ted_754.jpeg",
     "label": "The Ones Who Made It Softer",
@@ -1680,7 +1846,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 80,
+    "id": 88,
+    "src": "/images/scene/ted_76.jpeg",
+    "fileName": "ted_76.jpeg",
+    "label": "Ascending to New Heights",
+    "alt": "A breathtaking view of a winding staircase leading up to a mountain peak.",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/500",
+      "iso": 400,
+      "aperture": "f/6.3",
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 1800,
+      "height": 2400
+    }
+  },
+  {
+    "id": 89,
     "src": "/images/concept/ted_761.jpeg",
     "fileName": "ted_761.jpeg",
     "label": "We Stand Here",
@@ -1700,7 +1886,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 81,
+    "id": 90,
     "src": "/images/concept/ted_772.jpeg",
     "fileName": "ted_772.jpeg",
     "label": "A Quiet Page",
@@ -1720,7 +1906,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 82,
+    "id": 91,
     "src": "/images/scene/ted_792.jpeg",
     "fileName": "ted_792.jpeg",
     "label": "Torn Realities",
@@ -1740,7 +1926,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 83,
+    "id": 92,
+    "src": "/images/event/ted_808.jpeg",
+    "fileName": "ted_808.jpeg",
+    "label": "Making Memories",
+    "alt": "Trip to Ninh Thuan",
+    "category": "Event",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/400",
+      "iso": 400,
+      "aperture": "f/5.6",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1613
+    }
+  },
+  {
+    "id": 93,
     "src": "/images/event/ted_809.jpeg",
     "fileName": "ted_809.jpeg",
     "label": "Into the Light",
@@ -1760,7 +1966,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 84,
+    "id": 94,
     "src": "/images/scene/ted_832.jpeg",
     "fileName": "ted_832.jpeg",
     "label": "Where the Wind Goes",
@@ -1782,7 +1988,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 85,
+    "id": 95,
     "src": "/images/street/ted_834.jpeg",
     "fileName": "ted_834.jpeg",
     "label": "The Observer",
@@ -1802,7 +2008,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 86,
+    "id": 96,
     "src": "/images/scene/ted_843.jpeg",
     "fileName": "ted_843.jpeg",
     "label": "Sunlit Hideaway",
@@ -1824,7 +2030,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 87,
+    "id": 97,
     "src": "/images/event/ted_859.jpeg",
     "fileName": "ted_859.jpeg",
     "label": "Unseen Pulse",
@@ -1843,7 +2049,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 88,
+    "id": 98,
     "src": "/images/scene/ted_86.jpeg",
     "fileName": "ted_86.jpeg",
     "label": "No Bad Days",
@@ -1865,7 +2071,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 89,
+    "id": 99,
     "src": "/images/event/ted_863.jpeg",
     "fileName": "ted_863.jpeg",
     "label": "Tools of Mine",
@@ -1885,7 +2091,27 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 90,
+    "id": 100,
+    "src": "/images/scene/ted_868.jpeg",
+    "fileName": "ted_868.jpeg",
+    "label": "Call of the Sea",
+    "alt": "Out off the grid",
+    "category": "Scene",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/1250",
+      "iso": 400,
+      "aperture": "f/9",
+      "camera": "Canon EOS RP",
+      "lens": "Canon EF 50mm f/1.8 STM",
+      "focalLengthMm": 50,
+      "width": 1416,
+      "height": 2400
+    }
+  },
+  {
+    "id": 101,
     "src": "/images/event/ted_877.jpeg",
     "fileName": "ted_877.jpeg",
     "label": "Soulful Soles",
@@ -1905,7 +2131,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 91,
+    "id": 102,
     "src": "/images/concept/ted_880.jpeg",
     "fileName": "ted_880.jpeg",
     "label": "Simple Joys",
@@ -1925,7 +2151,26 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 92,
+    "id": 103,
+    "src": "/images/event/ted_891.jpeg",
+    "fileName": "ted_891.jpeg",
+    "label": "Gaze of Youth",
+    "alt": "Pointing at boundless horizons and unwritten futures.",
+    "category": "Event",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/2000",
+      "iso": 400,
+      "aperture": "f/6.3",
+      "camera": "Nikon Nikomat FTN",
+      "lens": "Nikon Series E 36-72mm f/3.5",
+      "width": 2400,
+      "height": 1613
+    }
+  },
+  {
+    "id": 104,
     "src": "/images/scene/ted_903.jpeg",
     "fileName": "ted_903.jpeg",
     "label": "A Place I’ll Miss",
@@ -1947,7 +2192,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 93,
+    "id": 105,
     "src": "/images/concept/ted_937.jpeg",
     "fileName": "ted_937.jpeg",
     "label": "Graduation Props",
@@ -1968,7 +2213,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 94,
+    "id": 106,
     "src": "/images/scene/ted_943.jpeg",
     "fileName": "ted_943.jpeg",
     "label": "Still There",
@@ -1988,7 +2233,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 95,
+    "id": 107,
     "src": "/images/event/ted_945.jpeg",
     "fileName": "ted_945.jpeg",
     "label": "Vũ Ngọc Bảo Khuê",
@@ -2008,7 +2253,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 96,
+    "id": 108,
     "src": "/images/scene/ted_947.jpeg",
     "fileName": "ted_947.jpeg",
     "label": "Window Light & Bản",
@@ -2030,7 +2275,26 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 97,
+    "id": 109,
+    "src": "/images/event/ted_953.jpeg",
+    "fileName": "ted_953.jpeg",
+    "label": "Suspended Dream",
+    "alt": "A fleeting act of weightless grace beneath the spotlight.",
+    "category": "Event",
+    "hideOnHome": false,
+    "tags": [],
+    "exif": {
+      "shutterSpeed": "1/125",
+      "iso": 100,
+      "aperture": "f/1.8",
+      "camera": "Apple iPhone 15 Pro Max",
+      "lens": "iPhone 15 Pro Max back camera 6.765mm f/1.78",
+      "width": 1350,
+      "height": 2400
+    }
+  },
+  {
+    "id": 110,
     "src": "/images/event/ted_959.jpeg",
     "fileName": "ted_959.jpeg",
     "label": "Under the Light",
@@ -2050,7 +2314,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 98,
+    "id": 111,
     "src": "/images/scene/ted_975.jpeg",
     "fileName": "ted_975.jpeg",
     "label": "Flower",
@@ -2069,7 +2333,7 @@ export const portfolioItems: PortfolioItem[] = [
     }
   },
   {
-    "id": 99,
+    "id": 112,
     "src": "/images/event/ted_976.jpeg",
     "fileName": "ted_976.jpeg",
     "label": "Trần Tín Đạt",

@@ -1,347 +1,115 @@
 # Workflow thêm ảnh mới (preprocessing → portfolio)
 
-Mục tiêu: thêm ảnh mới vào project theo chuẩn tên file `ted_###`, trích EXIF, điền metadata (label/alt/category/tags/…) theo kiểu **điền thiếu (fill missing)**, rồi tự phân loại ảnh vào từng category folder.
-
-## 1) Import ảnh mới
-
-- Copy ảnh mới vào thư mục: `preprocessing/`
-
-## 2) Đổi tên ảnh theo format `ted_###`
-
-Chạy:
-
-```bash
-npm run pre:rename
-```
-
-- Script sẽ **resize + convert về `.jpeg` + rename** ảnh trong `preprocessing/`.
-- Nó tránh trùng số `ted_###` với ảnh đang có trong `public/images/**`.
-
-Mặc định:
-
-- `MAX_DIM=2400`
-- `JPEG_QUALITY=82`
-
-
-```bash
-MAX_DIM=3000 JPEG_QUALITY=86 npm run pre:rename
-```
-
-## (Tuỳ chọn) Giảm size ảnh đã có trong `public/images/**`
-
-Nếu hiện tại web đang lag vì ảnh quá nặng, bạn có thể chạy 1 lần để shrink ảnh đang có:
-
-```bash
-npm run img:shrink
-```
-
-Lưu ý: lệnh này **chỉnh file in-place** trong `public/images/**`. Nếu bạn cần giữ bản gốc full-res, hãy backup trước khi chạy.
-
-## 3) Trích EXIF + tạo file metadata để bạn điền
-
-Chạy:
-
-```bash
+Quy trình tinh gọn để thêm ảnh mới vào portfolio: tự động đổi tên `ted_###`, tối ưu kích thước, trích xuất EXIF, điền metadata và tự động phân loại vào thư mục category.
 
 ---
 
-# Deploy / Publish (Vercel + GitHub)
-
-npm run pre:meta
-
-```
-
-- Preset: **Vite**
-- Build command: `npm run build`
-- Output directory: `dist`
-
-Nó sẽ tạo/cập nhật file:
-
-- Project này có `vercel.json` để:
-	- rewrite cho React Router (refresh `/contact`, `/about` không bị 404)
-	- thêm security headers (CSP, nosniff, …)
-
-
-
-- `scripts/preprocessing.metadata.json`
-
-
-
-
-
-
-- `exifExtracted`: EXIF trích từ ảnh (các key phổ biến luôn có sẵn: `camera`, `lens`, `aperture`, `shutterSpeed`, `iso`, …)
-- `exifFound`: `true/false` để biết ảnh có EXIF thật hay không
-- `overrideSnapshot`: snapshot data hiện đang có trong `scripts/portfolio.overrides.json` (nếu ảnh đó đã có entry)
-
-- `draft`: **phần bạn sẽ edit**
-
-
-### Bạn cần edit phần nào?
-
-Ưu tiên edit trong:
-
-- `draft.label`
-
-- `draft.alt`
-
-- `draft.category`
-- `draft.tags`
-- `draft.hideOnHome`
-
-- `draft.exif`
-
-- Nếu muốn gắn domain riêng: bạn phải sở hữu domain và trỏ DNS theo hướng dẫn trong Vercel.
-Ghi chú:
-
-- Lệnh `npm run pre:apply` sẽ **ưu tiên** `draft.*`.
-- Nếu `draft.label/alt` đang trống thì nó sẽ fallback dùng `suggested.label/alt` để fill vào overrides.
-- Nếu `draft.exif` trống thì nó sẽ fallback dùng `exifExtracted` để fill vào overrides.
-
-Tip: `npm run pre:meta` có thể chạy lại nhiều lần mà vẫn giữ nguyên phần `draft` bạn đã điền.
-
-## 4) Apply metadata vào overrides (CHỈ điền thiếu, không ghi đè)
-
-Chạy:
-
-```bash
-npm run pre:apply
-```
-
-Mặc định, sau khi apply xong thì script sẽ **reset** `scripts/preprocessing.metadata.json` về `{}` để tránh file phình (không giữ thông tin ảnh cũ nữa).
-
-Nếu bạn muốn giữ lại metadata (không reset) để tiếp tục chỉnh sửa, chạy:
-
-```bash
-npm run pre:apply -- --keep-metadata
-```
-
-Script sẽ update:
-
-- `scripts/portfolio.overrides.json`
-
-Nguyên tắc:
-
-- **Không ghi đè** các field đã có sẵn trong overrides.
-- Chỉ **fill** các field đang thiếu/rỗng.
-- `exif` sẽ merge theo từng field (field nào thiếu mới điền).
-
-## 5) Phân loại ảnh vào category folder (làm thủ công)
-
-Sau khi metadata ổn, bạn tự move ảnh từ `preprocessing/` sang:
-
-- `public/images/<category>/ted_###.jpeg`
-
-Ví dụ:
-
-- `public/images/scene/ted_451.jpeg`
-- `public/images/event/ted_999.jpeg`
-
-Generator sẽ:
-
-# Workflow thêm ảnh mới (preprocessing → portfolio)
-
-Mục tiêu: thêm ảnh mới vào project theo chuẩn tên file `ted_###`, trích EXIF, điền metadata (label/alt/category/tags/…) theo kiểu **điền thiếu (fill missing)**, rồi tự phân loại ảnh vào từng category folder.
-
-## 1) Import ảnh mới
-
-- Copy ảnh mới vào thư mục: `preprocessing/`
-
-## 2) Đổi tên ảnh theo format `ted_###`
-
-Chạy:
-
-```bash
-npm run pre:rename
-```
-
-- Script sẽ **resize + convert về `.jpeg` + rename** ảnh trong `preprocessing/`.
-- Nó tránh trùng số `ted_###` với ảnh đang có trong `public/images/**`.
-
-Mặc định:
-
-- `MAX_DIM=2400`
-- `JPEG_QUALITY=82`
-
-Bạn có thể override khi cần:
-
-```bash
-MAX_DIM=3000 JPEG_QUALITY=86 npm run pre:rename
-```
-
-## (Tuỳ chọn) Giảm size ảnh đã có trong `public/images/**`
-
-Nếu hiện tại web đang lag vì ảnh quá nặng, bạn có thể chạy 1 lần để shrink ảnh đang có:
-
-```bash
-npm run img:shrink
-```
-
-Lưu ý: lệnh này **chỉnh file in-place** trong `public/images/**`. Nếu bạn cần giữ bản gốc full-res, hãy backup trước khi chạy.
-
-## 3) Trích EXIF + tạo file metadata để bạn điền
-
-Chạy:
-
-```bash
-npm run pre:meta
-```
-
-Nó sẽ tạo/cập nhật file:
-
-- `scripts/preprocessing.metadata.json`
-
-Trong mỗi entry (mỗi ảnh) sẽ có:
-
-- `exifExtracted`: EXIF trích từ ảnh (các key phổ biến luôn có sẵn: `camera`, `lens`, `aperture`, `shutterSpeed`, `iso`, …)
-- `exifFound`: `true/false` để biết ảnh có EXIF thật hay không
-- `overrideSnapshot`: snapshot data hiện đang có trong `scripts/portfolio.overrides.json` (nếu ảnh đó đã có entry)
-- `draft`: **phần bạn sẽ edit**
-
-### Bạn cần edit phần nào?
-
-Ưu tiên edit trong:
-
-- `draft.label`
-- `draft.alt`
-- `draft.category`
-- `draft.tags`
-- `draft.hideOnHome`
-- `draft.exif`
-
-Ghi chú:
-
-- Lệnh `npm run pre:apply` sẽ **ưu tiên** `draft.*`.
-- Nếu `draft.label/alt` đang trống thì nó sẽ fallback dùng `suggested.label/alt` để fill vào overrides.
-- Nếu `draft.exif` trống thì nó sẽ fallback dùng `exifExtracted` để fill vào overrides.
-
-Tip: `npm run pre:meta` có thể chạy lại nhiều lần mà vẫn giữ nguyên phần `draft` bạn đã điền.
-
-## 4) Apply metadata vào overrides (CHỈ điền thiếu, không ghi đè)
-
-Chạy:
-
-```bash
-npm run pre:apply
-```
-
-Script sẽ update:
-
-- `scripts/portfolio.overrides.json`
-
-Nguyên tắc:
-
-- **Không ghi đè** các field đã có sẵn trong overrides.
-- Chỉ **fill** các field đang thiếu/rỗng.
-- `exif` sẽ merge theo từng field (field nào thiếu mới điền).
-
-## 5) Phân loại ảnh vào category folder (làm thủ công)
-
-Sau khi metadata ổn, bạn tự move ảnh từ `preprocessing/` sang:
-
-- `public/images/<category>/ted_###.jpeg`
-
-Ví dụ:
-
-- `public/images/scene/ted_451.jpeg`
-- `public/images/event/ted_999.jpeg`
-
-Generator sẽ:
-
-- Lấy `src` đúng theo đường dẫn folder bạn đặt (`/images/<category>/...`).
-- Nếu overrides chưa set `category`, nó có thể suy ra category theo tên folder.
-
-## 6) Regenerate data + chạy app
-
-Regenerate data (generate `src/data/portfolioItems.generated.ts`):
-
-```bash
-npm run regen
-```
-
-Chạy dev:
-
-```bash
-npm run dev
-```
-
-Build production:
-
-```bash
-npm run build
-```
+## 1. Thêm ảnh thô
+- Sao chép các file ảnh mới vào thư mục: `preprocessing/`
 
 ---
 
-## Cheatsheet nhanh
+## 2. Đổi tên & Chuẩn hoá kích thước
+Chạy lệnh:
+```bash
+npm run pre:rename
+```
+- Tự động **resize + nén sang `.jpeg` + đổi tên** thành định dạng chuẩn `ted_###.jpeg`.
+- Tự dò số ngẫu nhiên không trùng với các ảnh đã có trong hệ thống (`public/images/**`).
+- Mặc định: `MAX_DIM=2400`, `JPEG_QUALITY=82`. Có thể tuỳ chỉnh nếu cần:
+  ```bash
+  MAX_DIM=3000 JPEG_QUALITY=86 npm run pre:rename
+  ```
+
+---
+
+## 3. Trích xuất EXIF & Tạo Metadata gợi ý
+Chạy lệnh:
+```bash
+npm run pre:meta
+```
+- Tự động đọc thông số EXIF trực tiếp từ ảnh (máy ảnh, ống kính, khẩu độ, tốc độ, ISO, tiêu cự, kích thước).
+- Tạo hoặc cập nhật file: `scripts/preprocessing.metadata.json` với cấu trúc phẳng duy nhất:
+
+```json
+{
+  "ted_101.jpeg": {
+    "category": "Street",
+    "label": "TED 101",
+    "alt": "Portfolio image TED 101",
+    "tags": "",
+    "hideOnHome": false,
+    "exif": {
+      "camera": "Sony A7 IV",
+      "lens": "FE 35mm F1.4 GM",
+      "aperture": "f/1.4",
+      "shutterSpeed": "1/500",
+      "iso": 100,
+      "focalLengthMm": 35,
+      "width": 2400,
+      "height": 1600
+    }
+  }
+}
+```
+
+### Bạn cần chỉnh sửa gì trong file này?
+1. **`category`** *(quan trọng)*: Điền tên thể loại (ví dụ: `Street`, `Scene`, `Event`, `Concept`).
+2. **`label` & `alt`**: Đặt tên ảnh và mô tả nghệ thuật hiển thị trên web & lightbox.
+3. **`tags`**: Gắn tag phụ trợ nếu có (ví dụ: `"Night, Tokyo"` hoặc `["Night", "Tokyo"]`).
+4. **`hideOnHome`**: Đặt `true` nếu không muốn ảnh xuất hiện trên trang chủ Gallery.
+5. **`exif`**: Có thể sửa hoặc thêm các thông số nếu máy cơ / ảnh film không có EXIF số sẵn.
+
+*(Ghi chú: Lệnh `npm run pre:meta` có thể chạy lại nhiều lần mà vẫn giữ nguyên các giá trị bạn đã sửa).*
+
+---
+
+## 4. Áp dụng Metadata & Tự động Phân loại
+Chạy lệnh:
+```bash
+npm run pre:apply
+```
+
+Lệnh này sẽ tự động:
+1. **Ghi nhận vào Overrides**: Lưu thông tin vào `scripts/portfolio.overrides.json` theo cơ chế *fill-missing* (chỉ điền các trường còn thiếu, không ghi đè dữ liệu bạn đã lưu trước đó).
+2. **Tự động di chuyển file ảnh**: Tự động chuyển file ảnh từ `preprocessing/<fileName>` vào đúng thư mục phân loại `public/images/<category>/` (ví dụ: `public/images/street/ted_101.jpeg`).
+3. **Tự động cập nhật dữ liệu web**: Tự động chạy tạo lại `src/data/portfolioItems.generated.ts` và `src/data/albums.generated.ts`.
+4. **Dọn dẹp**: Tự động làm sạch `scripts/preprocessing.metadata.json` sau khi hoàn tất. *(Nếu muốn giữ lại file metadata để xem, thêm cờ: `npm run pre:apply -- --keep-metadata`)*.
+
+---
+
+## Cheatsheet Tóm tắt
 
 ```bash
-# 1) rename ảnh trong preprocessing/
+# 1) Đổi tên và tối ưu size ảnh
 npm run pre:rename
 
-# 2) trích EXIF + tạo file để điền metadata
+# 2) Trích xuất EXIF và tạo bản metadata gợi ý
 npm run pre:meta
 
-# 3) apply metadata (fill thiếu) vào overrides
+# 3) Mở scripts/preprocessing.metadata.json điền category, chỉnh label/alt/tags
+
+# 4) Apply vào overrides, tự động move ảnh vào public/images/<category>/ và regen data
 npm run pre:apply
 
-# 4) (tự tay) move ảnh sang public/images/<category>/...
-
-# 5) regen + dev/build
-npm run regen
+# 5) Chạy thử nghiệm web
 npm run dev
-npm run build
 ```
 
 ---
 
 # Deploy / Publish (Vercel + GitHub)
 
-> TL;DR: mỗi lần bạn `git push` lên branch đang deploy, Vercel sẽ tự build + update.
+Mỗi lần bạn `git push` lên branch deploy, Vercel sẽ tự động build và cập nhật phiên bản mới nhất.
 
-## 0) Setup Vercel (làm 1 lần)
+### Cấu hình Vercel:
+- **Framework Preset**: Vite
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist`
 
-- Import repo trên Vercel
-- Preset: **Vite**
-- Build command: `npm run build`
-- Output directory: `dist`
-
-Ghi chú:
-
-- Project này có `vercel.json` để:
-  - rewrite cho React Router (refresh `/contact`, `/about` không bị 404)
-  - thêm security headers (CSP, nosniff, …)
-
-## 1) Push code lên GitHub (cập nhật production)
-
-### Kiểm tra branch deploy
-
-Repo GitHub hiện đang deploy theo branch:
-
-- `feature-cinematic-portfolio-6560193385071199878`
-
-Kiểm tra branch hiện tại trên máy:
-
+### Lệnh Deploy nhanh:
 ```bash
-git branch --show-current
-```
-
-### Commit + push
-
-```bash
-git status
 git add .
-git commit -m "Update"
+git commit -m "Update portfolio images and metadata"
 git push origin HEAD:feature-cinematic-portfolio-6560193385071199878
 ```
-
-Tip: set upstream 1 lần để lần sau chỉ cần `git push`:
-
-```bash
-git push -u origin HEAD:feature-cinematic-portfolio-6560193385071199878
-```
-
-## 2) Domain (tuỳ chọn)
-
-- Nếu **không mua domain**: dùng luôn `*.vercel.app` là ok.
-- Nếu muốn gắn domain riêng: bạn phải sở hữu domain và trỏ DNS theo hướng dẫn trong Vercel.

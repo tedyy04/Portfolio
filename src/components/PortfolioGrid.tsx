@@ -43,24 +43,26 @@ export default function PortfolioGrid({ items }: PortfolioGridProps) {
                 openLightbox(index);
               }
             }}
-            className="masonry-item group relative cursor-pointer overflow-hidden rounded-2xl glass-frame liquid-hover image-frame-hover transition-all duration-500"
+            className="masonry-item group cursor-pointer block lovable-card"
             delayMs={(index % 9) * 45}
           >
             <img
               src={item.src}
               alt={item.alt}
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 ease-in-out group-hover:scale-[1.02]"
+              loading="lazy"
+              className="w-full h-auto transition-transform duration-500 ease-out group-hover:scale-[1.01]"
             />
+
             {item.tags?.[0] && (
-              <div className="absolute top-4 left-4 transition-opacity duration-300 opacity-90 group-hover:opacity-100">
-                <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase">
+              <div className="absolute top-4 left-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                <span className="inline-flex items-center rounded-full px-3 py-1 bg-surface/90 backdrop-blur-sm border border-outline text-charcoal font-label text-[10px] tracking-[0.05em] uppercase shadow-sm">
                   {item.tags[0]}
                 </span>
               </div>
             )}
 
             <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2">
-              <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase">
+              <span className="inline-flex items-center rounded-full px-3 py-1 bg-surface/90 backdrop-blur-sm border border-outline text-charcoal font-label text-[10px] tracking-[0.05em] uppercase shadow-sm">
                 {item.label}
               </span>
             </div>

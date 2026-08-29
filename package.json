@@ -8,7 +8,6 @@
     "pre:rename": "node scripts/rename-preprocessing-images.mjs",
     "pre:meta": "node scripts/preprocessing-metadata.mjs",
     "pre:apply": "node scripts/apply-preprocessing-metadata.mjs",
-    "img:shrink": "node scripts/shrink-public-images.mjs",
     "dev": "node scripts/generate-portfolio.mjs && node scripts/generate-albums.mjs && vite",
     "build": "node scripts/generate-portfolio.mjs && node scripts/generate-albums.mjs && tsc -b && vite build",
     "lint": "eslint .",

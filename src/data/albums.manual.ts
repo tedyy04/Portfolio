@@ -29,6 +29,6 @@ export interface AlbumMeta {
  */
 export const albumMetaBySlug: Record<string, AlbumMeta> = {
   our20s: {
-    description: 'Những khoảnh khắc của tuổi 20.',
+    description: 'Mùa hạ này rồi sẽ là mùa hạ năm ấy. Mùa hạ năm ấy là mùa hạ vĩnh cửu.',
   },
 };

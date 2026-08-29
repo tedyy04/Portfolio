@@ -64,6 +64,16 @@ export default function Album() {
 
     return (
       <main className="pt-40 pb-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full">
+        <div className="sticky top-40 z-40 mb-6">
+          <Link
+            to="/album"
+            className="glass-chip font-body text-[10px] tracking-[0.2em] uppercase gap-2 liquid-hover liquid-focus hover:scale-[1.02] transition-transform"
+          >
+            <span className="material-symbols-outlined text-sm">arrow_back</span>
+            All albums
+          </Link>
+        </div>
+
         <Reveal className="mb-10">
           <section className="relative overflow-hidden rounded-xl glass-frame">
             <div className="w-full h-[220px] md:h-[320px] lg:h-[380px]">
@@ -92,18 +102,6 @@ export default function Album() {
               ) : null}
             </div>
           </section>
-
-          <div className="mt-6">
-            <Link
-              to="/album"
-              className="inline-flex items-center gap-3 text-primary group"
-            >
-              <span className="font-body text-[10px] tracking-[0.2em] uppercase border-b border-transparent group-hover:border-primary transition-all pb-1">
-                All albums
-              </span>
-              <span className="material-symbols-outlined text-sm">arrow_forward</span>
-            </Link>
-          </div>
         </Reveal>
 
         <AlbumGrid items={resolvedAlbum.items} />
@@ -115,10 +113,10 @@ export default function Album() {
     <main className="pt-40 pb-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full">
       <Reveal className="mb-10">
         <h1 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-primary">
-          Albums
+          Featured Collections
         </h1>
         <p className="mt-4 text-on-surface-variant font-body text-sm leading-relaxed max-w-2xl">
-          Featured Collection.
+          Visual stories told through the lens. 
         </p>
       </Reveal>
 

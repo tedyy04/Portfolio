@@ -77,55 +77,55 @@ export default function Contact() {
         <div className="md:col-span-7">
           <form className="space-y-8" onSubmit={handleSubmit}>
             <div className="group relative">
-              <label htmlFor="name" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-primary transition-colors">Name</label>
+              <label htmlFor="name" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 placeholder="Your full name"
-                className="glass-input mt-3 px-4 py-4 transition-all duration-500"
+                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-all duration-300 rounded-none"
               />
             </div>
             <div className="group relative">
-              <label htmlFor="email" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-primary transition-colors">Email Address</label>
+              <label htmlFor="email" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Email Address</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 placeholder="email@example.com"
-                className="glass-input mt-3 px-4 py-4 transition-all duration-500"
+                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-all duration-300 rounded-none"
               />
             </div>
             <div className="group relative">
-              <label htmlFor="subject" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-primary transition-colors">Subject</label>
+              <label htmlFor="subject" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Subject</label>
               <select
                 id="subject"
                 name="subject"
-                className="glass-input mt-3 px-4 py-4 appearance-none transition-all duration-500"
+                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal appearance-none transition-all duration-300 rounded-none"
               >
-                <option className="bg-surface text-on-surface">Portrait</option>
-                <option className="bg-surface text-on-surface">Concept / Creative</option>
-                <option className="bg-surface text-on-surface">Editorial</option>
-                <option className="bg-surface text-on-surface">Custom Inquiry</option>
+                <option>Portrait</option>
+                <option>Concept / Creative</option>
+                <option>Editorial</option>
+                <option>Custom Inquiry</option>
               </select>
             </div>
             <div className="group relative">
-              <label htmlFor="message" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-primary transition-colors">Message</label>
+              <label htmlFor="message" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Message</label>
               <textarea
                 id="message"
                 name="message"
                 rows={4}
                 placeholder="Describe your project or vision"
-                className="glass-input mt-3 px-4 py-4 resize-none transition-all duration-500"
+                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal resize-none transition-all duration-300 rounded-none"
               ></textarea>
             </div>
             <div className="pt-6">
               <button
                 type="submit"
-                className="group glass-button liquid-hover"
+                className="group inline-flex items-center gap-2 font-body text-[16px] text-charcoal hover:text-muted transition-colors outline-none"
               >
                 Send Message
-                <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
               </button>
             </div>
           </form>
