@@ -56,43 +56,55 @@ export default function Home() {
   }, [seed]);
 
   return (
-    <main className="pt-32 pb-32 w-full">
-      {/* Hero Section */}
-      <section className="px-6 md:px-12 lg:px-20 max-w-[1200px] mx-auto pt-20 pb-32 flex flex-col items-start justify-center">
+    <main className="pt-28 pb-32 w-full">
+      {/* Hero section */}
+      <section className="px-6 md:px-12 lg:px-20 max-w-[1400px] mx-auto pt-16 pb-28 flex flex-col items-start justify-center">
         <Reveal>
-          <h1 className="lovable-h1 text-charcoal mb-6 max-w-4xl">
-            THE CINEMATIC NEGATIVE
-          </h1>
-          <p className="text-[18px] text-muted font-body max-w-2xl leading-[1.38] mb-10">
-            Capturing the quiet, focused intensity of the modern world. Every frame is a narrative preserved in obsidian layers. A private gallery for the discerning eye.
+          {/* Eyebrow label */}
+          <p className="label-caps mb-6 text-muted">
+            Cinematic Photography
           </p>
-          <div className="flex flex-wrap gap-4">
+          <h1 className="lovable-h1 text-charcoal mb-7 max-w-3xl">
+            The cinematic negative
+          </h1>
+          <p className="text-[18px] text-muted font-body max-w-[55ch] leading-[1.55] mb-10">
+            Capturing the quiet, focused intensity of the modern world. Every frame is a narrative
+            preserved in obsidian layers. A private gallery for the discerning eye.
+          </p>
+          <div className="flex flex-wrap gap-3">
             <a href="/album" className="lovable-button lovable-button-primary">
-              View Albums
+              View albums
             </a>
             <a href="/about" className="lovable-button lovable-button-ghost">
-              Read Profile
+              Read profile
             </a>
           </div>
         </Reveal>
       </section>
 
-      {/* Grid Section */}
-      <section className="px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto">
-        <div className="mb-12 flex justify-between items-end border-b border-outline pb-6">
-          <h2 className="lovable-h3 text-charcoal">Selected Works</h2>
+      {/* Grid section */}
+      <section className="px-6 md:px-12 lg:px-20 max-w-[1400px] mx-auto">
+        <div className="mb-10 flex justify-between items-end border-b border-outline pb-5">
+          <h2 className="lovable-h3 text-charcoal">Selected works</h2>
+          <a
+            href="/album"
+            className="label-caps text-muted hover:text-charcoal transition-colors duration-200 pb-0.5 border-b border-transparent hover:border-muted"
+          >
+            View all
+          </a>
         </div>
         <PortfolioGrid items={items} />
       </section>
-      
-      {/* Footer / CTA */}
-      <section className="mt-40 mb-20 text-center max-w-3xl mx-auto px-6">
+
+      {/* CTA section */}
+      <section className="mt-36 mb-16 text-center max-w-2xl mx-auto px-6">
         <Reveal>
-          <h2 className="lovable-h2 text-charcoal mb-6">
+          <p className="label-caps mb-5 text-muted">Based in Ho Chi Minh City</p>
+          <h2 className="lovable-h2 text-charcoal mb-5">
             Let's create something together.
           </h2>
-          <p className="font-body text-[18px] leading-[1.38] text-muted mb-10">
-            Based in Ho Chi Minh City, available for selected projects worldwide.
+          <p className="font-body text-[17px] leading-[1.55] text-muted mb-9 max-w-[50ch] mx-auto">
+            Available for selected portrait, concept, and editorial projects worldwide.
           </p>
           <a href="/contact" className="lovable-button lovable-button-primary">
             Get in touch

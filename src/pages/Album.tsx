@@ -92,11 +92,11 @@ export default function Album() {
             <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent" />
 
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-              <h1 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-primary">
+              <h1 className="lovable-h2 text-charcoal">
                 {resolvedAlbum.title}
               </h1>
               {resolvedAlbum.description ? (
-                <p className="mt-3 text-on-surface-variant font-body text-sm leading-relaxed max-w-2xl">
+                <p className="mt-3 text-on-surface-variant font-body text-[15px] leading-[1.6] max-w-[55ch]">
                   {resolvedAlbum.description}
                 </p>
               ) : null}
@@ -112,11 +112,12 @@ export default function Album() {
   return (
     <main className="pt-40 pb-24 px-6 md:px-12 lg:px-20 max-w-[1600px] mx-auto w-full">
       <Reveal className="mb-10">
-        <h1 className="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-primary">
-          Featured Collections
+        <p className="label-caps mb-4">Albums</p>
+        <h1 className="lovable-h2 text-charcoal">
+          Featured collections
         </h1>
-        <p className="mt-4 text-on-surface-variant font-body text-sm leading-relaxed max-w-2xl">
-          Visual stories told through the lens. 
+        <p className="mt-4 text-on-surface-variant font-body text-[16px] leading-[1.6] max-w-[52ch]">
+          Visual stories told through the lens.
         </p>
       </Reveal>
 
@@ -127,23 +128,19 @@ export default function Album() {
           </p>
         </Reveal>
       ) : (
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
-          {albums.map((album, index) => {
+        <section>
+          {/* First album — full-width hero treatment */}
+          {albums.slice(0, 1).map((album) => {
             const cover = pickAlbumCover(album);
             const photoCount = album.items.length;
-
             return (
-              <Reveal
-                key={album.slug}
-                className="group relative overflow-hidden rounded-2xl glass-frame liquid-hover image-frame-hover transition-all duration-500"
-                delayMs={(index % 9) * 45}
-              >
+              <Reveal key={album.slug} className="mb-5">
                 <Link
                   to={`/album/${encodeSlugPath(album.slug)}`}
-                  className="block"
                   aria-label={`Open album ${album.title}`}
+                  className="group relative block overflow-hidden rounded-xl glass-frame liquid-hover image-frame-hover"
                 >
-                  <div className="w-full aspect-[16/10]">
+                  <div className="w-full aspect-[16/7]">
                     {cover ? (
                       <img
                         src={cover.src}
@@ -155,21 +152,56 @@ export default function Album() {
                       <div className="w-full h-full bg-surface-container-low" />
                     )}
                   </div>
-
-                  <div className="absolute inset-x-0 bottom-0 p-5">
-                    <div className="flex items-end justify-between gap-3">
-                      <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase">
-                        {album.title}
-                      </span>
-                      <span className="glass-chip font-label text-[9px] tracking-[0.2em] uppercase">
-                        {photoCount} photos
-                      </span>
-                    </div>
+                  <div className="absolute inset-x-0 bottom-0 p-6 md:p-8 flex items-end justify-between gap-4">
+                    <span className="glass-chip">{album.title}</span>
+                    <span className="glass-chip">{photoCount} photos</span>
                   </div>
                 </Link>
               </Reveal>
             );
           })}
+
+          {/* Remaining albums — 2-column grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            {albums.slice(1).map((album, index) => {
+              const cover = pickAlbumCover(album);
+              const photoCount = album.items.length;
+
+              return (
+                <Reveal
+                  key={album.slug}
+                  className="group relative overflow-hidden rounded-xl glass-frame liquid-hover image-frame-hover transition-all duration-500"
+                  delayMs={(index % 6) * 55}
+                >
+                  <Link
+                    to={`/album/${encodeSlugPath(album.slug)}`}
+                    className="block"
+                    aria-label={`Open album ${album.title}`}
+                  >
+                    <div className="w-full aspect-[16/10]">
+                      {cover ? (
+                        <img
+                          src={cover.src}
+                          alt={cover.alt}
+                          className="w-full h-full object-cover transition-all duration-700 ease-in-out group-hover:scale-[1.02]"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-surface-container-low" />
+                      )}
+                    </div>
+
+                    <div className="absolute inset-x-0 bottom-0 p-5">
+                      <div className="flex items-end justify-between gap-3">
+                        <span className="glass-chip">{album.title}</span>
+                        <span className="glass-chip">{photoCount} photos</span>
+                      </div>
+                    </div>
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </div>
         </section>
       )}
     </main>

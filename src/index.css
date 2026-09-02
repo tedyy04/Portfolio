@@ -4,63 +4,103 @@
 
 @layer base {
   :root {
-    /* Lovable custom properties */
-    --lovable-inset-shadow: rgba(255, 255, 255, 0.2) 0px 0.5px 0px 0px inset, rgba(0, 0, 0, 0.2) 0px 0px 0px 0.5px inset, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    --lovable-focus-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    --lovable-inset-shadow: rgba(255, 255, 255, 0.15) 0px 0.5px 0px 0px inset, rgba(0, 0, 0, 0.18) 0px 0px 0px 0.5px inset, rgba(0, 0, 0, 0.04) 0px 1px 2px 0px;
+    --lovable-focus-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    /* Warm-tinted shadows matching cream background */
+    --shadow-warm: rgba(60, 50, 30, 0.08) 0px 4px 20px, rgba(60, 50, 30, 0.04) 0px 1px 4px;
+    --shadow-warm-lg: rgba(60, 50, 30, 0.12) 0px 12px 40px, rgba(60, 50, 30, 0.06) 0px 2px 8px;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
     @apply bg-background text-on-background font-body selection:bg-charcoal-40 selection:text-on-primary;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     position: relative;
     isolation: isolate;
+  }
+
+  /* Grain overlay — subtle noise texture to break digital flatness */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
   }
 
   #root {
     position: relative;
     z-index: 1;
   }
+
+  /* Global heading defaults */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
 }
 
 @layer components {
-  /* Buttons */
+  /* ─── Buttons ─────────────────────────────────────────────── */
   .lovable-button {
-    @apply inline-flex items-center justify-center rounded px-4 py-2 font-body text-[16px] font-normal transition-all duration-200 outline-none;
+    @apply inline-flex items-center justify-center rounded px-5 py-2.5 font-body text-[15px] font-medium transition-all duration-200 outline-none;
+    will-change: transform;
   }
 
   .lovable-button-primary {
     @apply bg-primary text-on-primary;
     box-shadow: var(--lovable-inset-shadow);
   }
-  
+
   .lovable-button-primary:hover {
-    opacity: 0.9;
+    opacity: 0.88;
+    transform: translateY(-1px);
+    box-shadow: var(--lovable-inset-shadow), var(--shadow-warm);
   }
-  
+
   .lovable-button-primary:active {
-    opacity: 0.8;
+    opacity: 0.82;
+    transform: scale(0.98) translateY(0);
+    box-shadow: var(--lovable-inset-shadow);
   }
 
   .lovable-button-primary:focus-visible {
     box-shadow: var(--lovable-inset-shadow), var(--lovable-focus-shadow);
+    outline: 2px solid rgba(26, 26, 24, 0.45);
+    outline-offset: 2px;
   }
 
   .lovable-button-ghost {
     @apply bg-transparent text-primary;
-    border: 1px solid rgba(28, 28, 28, 0.4);
+    border: 1px solid rgba(26, 26, 24, 0.28);
   }
-  
+
   .lovable-button-ghost:hover {
     @apply bg-charcoal-4;
+    border-color: rgba(26, 26, 24, 0.5);
+    transform: translateY(-1px);
   }
-  
+
   .lovable-button-ghost:active {
+    transform: scale(0.98);
     opacity: 0.8;
   }
-  
+
   .lovable-button-ghost:focus-visible {
     box-shadow: var(--lovable-focus-shadow);
-    border-color: rgba(28, 28, 28, 0.8);
+    border-color: rgba(26, 26, 24, 0.8);
+    outline: 2px solid rgba(26, 26, 24, 0.3);
+    outline-offset: 2px;
   }
 
   .lovable-button-pill {
@@ -69,50 +109,135 @@
 
   .lovable-button-pill:hover {
     @apply bg-charcoal-4;
+    transform: translateY(-1px);
   }
 
   .lovable-button-pill:active {
+    transform: scale(0.98);
     opacity: 0.8;
   }
 
   .lovable-button-pill:focus-visible {
     box-shadow: var(--lovable-focus-shadow);
+    outline: 2px solid rgba(26, 26, 24, 0.3);
+    outline-offset: 2px;
   }
 
-  /* Typography utilities */
+  /* ─── Typography ─────────────────────────────────────────── */
+  /* Fluid clamp-based scale with strong Outfit weight */
   .lovable-h1 {
-    @apply font-headline font-semibold text-[60px] leading-[1.05];
-    letter-spacing: -1.5px;
+    @apply font-headline font-bold leading-[1.05];
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    letter-spacing: -0.035em;
   }
 
   .lovable-h2 {
-    @apply font-headline font-semibold text-[48px] leading-tight;
-    letter-spacing: -1.2px;
+    @apply font-headline font-semibold leading-[1.1];
+    font-size: clamp(1.75rem, 3.75vw, 3rem);
+    letter-spacing: -0.03em;
   }
 
   .lovable-h3 {
-    @apply font-headline font-semibold text-[36px] leading-tight;
-    letter-spacing: -0.9px;
+    @apply font-headline font-semibold leading-[1.2];
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    letter-spacing: -0.025em;
   }
 
   .lovable-link {
-    @apply text-primary underline decoration-1 underline-offset-4 transition-colors;
+    @apply text-primary underline decoration-1 underline-offset-4 transition-colors duration-200;
   }
-  
+
   .lovable-link:hover {
     @apply text-muted decoration-muted;
   }
 
-  /* Cards */
+  /* ─── Cards ──────────────────────────────────────────────── */
   .lovable-card {
     @apply bg-surface rounded-xl overflow-hidden relative;
-    border: 1px solid #eceae4;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #e6e3dc;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .lovable-card:hover {
-    box-shadow: rgba(0,0,0,0.04) 0px 10px 30px;
-    transform: translateY(-2px);
+    box-shadow: var(--shadow-warm-lg);
+    transform: translateY(-3px);
+  }
+
+  /* ─── Glass chip ─────────────────────────────────────────── */
+  /* Used in Album page and PortfolioGrid for overlaid tags */
+  .glass-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: rgba(245, 242, 235, 0.84);
+    backdrop-filter: blur(10px) saturate(1.5);
+    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+    border: 0.5px solid rgba(26, 26, 24, 0.12);
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 0.5px 0px inset, rgba(0, 0, 0, 0.07) 0px 1px 4px;
+    color: #1a1a18;
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* ─── Glass frame ────────────────────────────────────────── */
+  /* Album hero banner container */
+  .glass-frame {
+    border: 0.5px solid rgba(26, 26, 24, 0.1);
+    box-shadow: var(--shadow-warm);
+  }
+
+  /* ─── Liquid hover ───────────────────────────────────────── */
+  /* Subtle lift effect on interactive image containers */
+  .liquid-hover {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  }
+
+  .liquid-hover:hover {
+    transform: scale(1.006);
+    filter: brightness(1.03);
+  }
+
+  /* ─── Liquid focus ───────────────────────────────────────── */
+  /* Accessible keyboard focus ring for custom interactive elements */
+  .liquid-focus:focus-visible {
+    outline: 2px solid rgba(26, 26, 24, 0.5);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* ─── Route overlay ──────────────────────────────────────── */
+  /* Used by GSAP route transition in App.tsx */
+  .liquid-route-overlay {
+    background: rgba(245, 242, 235, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+
+  /* ─── Image frame hover ──────────────────────────────────── */
+  /* Album grid cards */
+  .image-frame-hover {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+
+  .image-frame-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-warm-lg);
+  }
+
+  /* ─── Label caps ─────────────────────────────────────────── */
+  .label-caps {
+    font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #5c5c5a;
   }
 }
 
@@ -125,12 +250,13 @@
     scrollbar-width: none;
   }
 
+  /* Reveal animation — used by the Reveal component */
   .reveal {
     opacity: 0;
-    transform: translate3d(0, 16px, 0);
+    transform: translate3d(0, 22px, 0);
     transition:
-      opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
-      transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+      opacity 750ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
   }
 
@@ -148,11 +274,12 @@
     }
   }
 
+  /* Masonry grid — used in PortfolioGrid */
   .masonry-grid {
     column-count: 1;
-    column-gap: 24px;
+    column-gap: 20px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 640px) {
     .masonry-grid {
       column-count: 2;
     }
@@ -162,13 +289,14 @@
       column-count: 3;
     }
   }
-  
+
   .masonry-item {
     break-inside: avoid;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 }
 
+/* Material Symbols weight config */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
 }

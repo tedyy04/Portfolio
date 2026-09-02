@@ -41,7 +41,7 @@ export default function Contact() {
     ].filter((line): line is string => line !== null);
 
     const url = gmailComposeUrl({
-      to: "hieutran1112824@gmail.com",
+      to: "hieutran8624.work@gmail.com",
       subject: `[Portfolio] ${subject}`,
       body: bodyLines.join("\n"),
     });
@@ -50,107 +50,138 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen pt-48 pb-24 px-6 md:px-12 flex flex-col items-center w-full">
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-24">
+    <main className="min-h-screen pt-36 pb-24 px-6 md:px-12 flex flex-col items-center w-full">
+      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24">
+
+        {/* Left col — headline + info */}
         <div className="md:col-span-5 flex flex-col justify-start">
-          <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-8">
-            LET'S<br />CAPTURE<br />THE VOID.
+          <p className="label-caps mb-5">Contact</p>
+          <h1 className="lovable-h1 text-charcoal mb-8">
+            Let's capture<br />the void.
           </h1>
-          <div className="space-y-6 max-w-sm">
-            <p className="text-on-surface-variant text-sm leading-relaxed">
-              Currently based in HCMC, available for portraiture and concepts. Specializing in urban spaces, fleeting emotions, and ordinary scenes with a sense of mood, depth, and visual narrative.
+          <div className="space-y-6 max-w-[46ch]">
+            <p className="text-on-surface-variant font-body text-[16px] leading-[1.6]">
+              Currently based in HCMC, available for portraiture and concepts.
+              Specializing in urban spaces, fleeting emotions, and ordinary scenes
+              with a sense of mood, depth, and visual narrative.
             </p>
-            <div className="flex flex-col gap-2 pt-4">
-              <span className="font-label text-[10px] tracking-[0.1em] uppercase text-outline">Direct Inquiries</span>
+            <div className="flex flex-col gap-2 pt-2">
+              <span className="label-caps">Direct inquiries</span>
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=hieutran1112824%40gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=hieutran8624.work%40gmail.com"
                 target="_blank"
                 rel="noreferrer"
-                className="text-primary hover:text-outline transition-colors duration-300 text-lg"
+                className="lovable-link font-body text-[16px]"
               >
-                hieutran1112824@gmail.com
+                hieutran8624.work@gmail.com
               </a>
             </div>
           </div>
         </div>
 
+        {/* Right col — form */}
         <div className="md:col-span-7">
-          <form className="space-y-8" onSubmit={handleSubmit}>
+          <form className="space-y-7" onSubmit={handleSubmit} noValidate>
             <div className="group relative">
-              <label htmlFor="name" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Name</label>
+              <label
+                htmlFor="contact-name"
+                className="label-caps mb-3 block group-focus-within:text-charcoal transition-colors"
+              >
+                Name
+              </label>
               <input
                 type="text"
-                id="name"
+                id="contact-name"
                 name="name"
                 placeholder="Your full name"
-                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-all duration-300 rounded-none"
+                required
+                className="w-full bg-surface-bright border border-outline mt-2 px-4 py-3.5 text-charcoal font-body text-[16px] outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-all duration-200 rounded-none placeholder:text-muted/60"
               />
             </div>
             <div className="group relative">
-              <label htmlFor="email" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Email Address</label>
+              <label
+                htmlFor="contact-email"
+                className="label-caps mb-3 block group-focus-within:text-charcoal transition-colors"
+              >
+                Email address
+              </label>
               <input
                 type="email"
-                id="email"
+                id="contact-email"
                 name="email"
                 placeholder="email@example.com"
-                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-all duration-300 rounded-none"
+                required
+                className="w-full bg-surface-bright border border-outline mt-2 px-4 py-3.5 text-charcoal font-body text-[16px] outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal transition-all duration-200 rounded-none placeholder:text-muted/60"
               />
             </div>
             <div className="group relative">
-              <label htmlFor="subject" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Subject</label>
+              <label
+                htmlFor="contact-subject"
+                className="label-caps mb-3 block group-focus-within:text-charcoal transition-colors"
+              >
+                Subject
+              </label>
               <select
-                id="subject"
+                id="contact-subject"
                 name="subject"
-                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal appearance-none transition-all duration-300 rounded-none"
+                className="w-full bg-surface-bright border border-outline mt-2 px-4 py-3.5 text-charcoal font-body text-[16px] outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal appearance-none transition-all duration-200 rounded-none"
               >
                 <option>Portrait</option>
                 <option>Concept / Creative</option>
                 <option>Editorial</option>
-                <option>Custom Inquiry</option>
+                <option>Custom inquiry</option>
               </select>
             </div>
             <div className="group relative">
-              <label htmlFor="message" className="font-label text-[10px] tracking-[0.1em] uppercase text-outline group-focus-within:text-charcoal transition-colors">Message</label>
+              <label
+                htmlFor="contact-message"
+                className="label-caps mb-3 block group-focus-within:text-charcoal transition-colors"
+              >
+                Message
+              </label>
               <textarea
-                id="message"
+                id="contact-message"
                 name="message"
-                rows={4}
+                rows={5}
                 placeholder="Describe your project or vision"
-                className="w-full bg-surface-bright border border-outline mt-3 px-4 py-4 text-charcoal outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal resize-none transition-all duration-300 rounded-none"
-              ></textarea>
+                className="w-full bg-surface-bright border border-outline mt-2 px-4 py-3.5 text-charcoal font-body text-[16px] outline-none focus:border-charcoal focus:ring-1 focus:ring-charcoal resize-none transition-all duration-200 rounded-none placeholder:text-muted/60"
+              />
             </div>
-            <div className="pt-6">
+            <div className="pt-2">
               <button
                 type="submit"
-                className="group inline-flex items-center gap-2 font-body text-[16px] text-charcoal hover:text-muted transition-colors outline-none"
+                className="lovable-button lovable-button-primary inline-flex items-center gap-2"
               >
-                Send Message
-                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                Send message
+                <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
+                  arrow_forward
+                </span>
               </button>
             </div>
           </form>
         </div>
       </div>
 
-      <section className="w-full max-w-7xl mt-48 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="relative aspect-video overflow-hidden rounded-2xl group liquid-hover">
+      {/* Work preview grid */}
+      <section className="w-full max-w-5xl mt-32 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="relative aspect-video overflow-hidden rounded-xl group liquid-hover glass-frame">
           <img
             src="/images/concept/ted_142.jpeg"
-            alt="Pre-grad Concepts"
-            className="w-full h-full object-cover opacity-50 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+            alt="Pre-grad concepts shoot"
+            className="w-full h-full object-cover opacity-55 group-hover:opacity-80 group-hover:scale-[1.03] transition-all duration-700"
           />
-          <div className="absolute bottom-8 left-8">
-            <span className="font-label text-[10px] tracking-[0.2em] text-primary uppercase">Pre-grad Concepts</span>
+          <div className="absolute bottom-6 left-6">
+            <span className="glass-chip">Pre-grad concepts</span>
           </div>
         </div>
-        <div className="relative aspect-video overflow-hidden rounded-2xl group liquid-hover">
+        <div className="relative aspect-video overflow-hidden rounded-xl group liquid-hover glass-frame">
           <img
             src="/images/concept/ted_761.jpeg"
-            alt="Áo Dài Concept"
-            className="w-full h-full object-cover opacity-40 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"
+            alt="Áo Dài concept shoot"
+            className="w-full h-full object-cover opacity-45 group-hover:opacity-75 group-hover:scale-[1.03] transition-all duration-700"
           />
-          <div className="absolute bottom-8 left-8">
-            <span className="font-label text-[10px] tracking-[0.2em] text-primary uppercase">Áo Dài Concept</span>
+          <div className="absolute bottom-6 left-6">
+            <span className="glass-chip">Áo Dài concept</span>
           </div>
         </div>
       </section>

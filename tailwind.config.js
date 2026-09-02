@@ -8,40 +8,51 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Lovable warm cream background
-        "background": "#f7f4ed",
-        "on-background": "#1c1c1c",
+        // Warm cream background palette
+        "background": "#f5f2eb",
+        "on-background": "#1a1a18",
 
-        "surface": "#f7f4ed",
-        "surface-dim": "#eceae4",
-        "surface-bright": "#ffffff",
+        "surface": "#f5f2eb",
+        "surface-dim": "#ebe8e1",
+        "surface-bright": "#fefdf9",
 
-        // Lovable opacity-based neutral scale derivations (simulated with hex where opacity is tricky, or just use css variables)
-        // Here we just define the base ones.
-        "charcoal": "#1c1c1c",
-        "charcoal-83": "rgba(28,28,28,0.83)",
-        "charcoal-82": "rgba(28,28,28,0.82)",
-        "charcoal-40": "rgba(28,28,28,0.40)",
-        "charcoal-4": "rgba(28,28,28,0.04)",
-        "charcoal-3": "rgba(28,28,28,0.03)",
-        "muted": "#5f5f5d",
-        "off-white": "#fcfbf8",
+        // Neutral charcoal scale
+        "charcoal": "#1a1a18",
+        "charcoal-83": "rgba(26,26,24,0.83)",
+        "charcoal-82": "rgba(26,26,24,0.82)",
+        "charcoal-40": "rgba(26,26,24,0.40)",
+        "charcoal-4": "rgba(26,26,24,0.04)",
+        "charcoal-3": "rgba(26,26,24,0.03)",
+        "muted": "#5c5c5a",
+        "off-white": "#faf9f5",
 
-        "primary": "#1c1c1c",
-        "on-primary": "#fcfbf8",
-        
-        "secondary": "rgba(28,28,28,0.04)",
-        "on-secondary": "#1c1c1c",
+        "primary": "#1a1a18",
+        "on-primary": "#faf9f5",
 
-        "outline": "#eceae4",
-        "outline-variant": "rgba(28,28,28,0.4)",
-        "focus-ring": "rgba(59,130,246,0.5)",
+        "secondary": "rgba(26,26,24,0.04)",
+        "on-secondary": "#1a1a18",
+
+        "outline": "#e6e3dc",
+        "outline-variant": "rgba(26,26,24,0.35)",
+        "focus-ring": "rgba(26,26,24,0.4)",
+
+        // Extended tokens — used across Album, Contact, Category pages
+        "on-surface": "#1a1a18",
+        "on-surface-variant": "#5c5c5a",
+        "surface-container-low": "#ede9e2",
+        "surface-container": "#e5e2db",
       },
       fontFamily: {
-        // Lovable uses Camera Plain Variable, fallback to system UI sans
-        "headline": ["Camera Plain Variable", "ui-sans-serif", "system-ui", "sans-serif"],
-        "body": ["Camera Plain Variable", "ui-sans-serif", "system-ui", "sans-serif"],
-        "label": ["Camera Plain Variable", "ui-sans-serif", "system-ui", "sans-serif"]
+        // Outfit: modern, clean, punchy display sans-serif
+        "headline": ["Outfit", "ui-sans-serif", "system-ui", "sans-serif"],
+        // DM Sans: clean humanist sans for body + labels
+        "body": ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+        "label": ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      letterSpacing: {
+        "headline-tight": "-0.03em",
+        "display": "-0.04em",
+        "caps": "0.08em",
       },
       borderRadius: {
         "DEFAULT": "6px",
@@ -49,6 +60,7 @@ export default {
         "md": "8px",
         "lg": "12px",
         "xl": "16px",
+        "2xl": "20px",
         "pill": "9999px"
       },
     },

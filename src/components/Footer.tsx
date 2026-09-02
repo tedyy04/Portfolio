@@ -1,30 +1,45 @@
 export default function Footer() {
   const links = [
-    { label: 'INSTAGRAM', href: 'https://www.instagram.com/t3ddy.cr3/', external: true },
-    { label: 'FACEBOOK', href: 'https://www.facebook.com/tedyyheree', external: true },
-    { label: 'BEHANCE', href: 'https://www.behance.net/t3ddy_04', external: true },
-    { label: 'EMAIL', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=hieutran1112824%40gmail.com', external: true },
+    { label: 'Instagram', href: 'https://www.instagram.com/t3ddy.cr3/', external: true },
+    { label: 'Facebook', href: 'https://www.facebook.com/tedyyheree', external: true },
+    { label: 'Behance', href: 'https://www.behance.net/t3ddy_04', external: true },
+    { label: 'Email', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=hieutran8624.work%40gmail.com', external: true },
   ];
 
   return (
-    <footer className="mt-24 w-full px-6 pb-24">
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12 py-16">
-        <div className="flex gap-12">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              target={link.external ? '_blank' : undefined}
-              rel={link.external ? 'noreferrer' : undefined}
-              className="liquid-hover liquid-focus font-body text-[10px] tracking-[0.1em] uppercase text-on-surface-variant hover:text-primary transition-colors duration-300"
-            >
-              {link.label}
-            </a>
-          ))}
+    <footer className="w-full mt-16 border-t border-outline">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-12 py-12 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+
+        {/* Brand */}
+        <div className="flex flex-col gap-2">
+          <span className="font-headline text-[20px] tracking-[-0.02em] text-charcoal">
+            t3d.foto
+          </span>
+          <p className="font-body text-[13px] text-muted max-w-[34ch] leading-[1.5]">
+            Just a person who deeply obsessed with capturing the beauty of the souls.
+          </p>
         </div>
-        <p className="font-body text-[10px] tracking-[0.1em] uppercase text-on-surface-variant">
-          © T3D.FOTO ALL RIGHTS RESERVED
-        </p>
+
+        {/* Links + copyright */}
+        <div className="flex flex-col items-start md:items-end gap-5">
+          <div className="flex flex-wrap gap-6">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noreferrer' : undefined}
+                className="font-body text-[13px] text-muted hover:text-charcoal transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <p className="label-caps text-muted/60">
+            © {new Date().getFullYear()} t3d.foto — All rights reserved
+          </p>
+        </div>
+
       </div>
     </footer>
   );
